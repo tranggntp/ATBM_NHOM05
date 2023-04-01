@@ -27,3 +27,31 @@ C:\Users\trang\OneDrive\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\
 C:\Users\trang\OneDrive\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\ref\PhanHe1.dll
 C:\Users\trang\OneDrive\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.PhanQuyenHeThong.resources
 C:\Users\trang\OneDrive\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.XemQuyenUser.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\PhanHe1.exe
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\PhanHe1.deps.json
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\PhanHe1.runtimeconfig.json
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\PhanHe1.dll
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\PhanHe1.pdb
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.csproj.AssemblyReference.cache
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.PhanQuyenHeThong.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.QuanLiUser_Role.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.SuaRole.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.SuaUser.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.TaoUser.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.ThemRole.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.TrangChu.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.XemQuyenUser.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.XoaRole.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.XoaUser.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.csproj.GenerateResource.cache
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.GeneratedMSBuildEditorConfig.editorconfig
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.AssemblyInfoInputs.cache
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.AssemblyInfo.cs
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.csproj.CoreCompileInputs.cache
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.csproj.CopyComplete
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.dll
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\refint\PhanHe1.dll
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.pdb
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.genruntimeconfig.cache
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\ref\PhanHe1.dll
