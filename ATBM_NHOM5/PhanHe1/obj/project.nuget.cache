@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "KmoElPLARTEguQZcoMiJrB+QelouGSp16Tx4dhoOW5iV/1hL4a9arLZq4LmXduNSS7ZgeD3jL8pgccGxliLLLA==",
+  "dgSpecHash": "10cL53SVkR7paGjUPAmFG1hgZJbUSNaRnUMFMREnTFDacyhQeyF0SLf14ZBIvRS2a5MbDwgSGNxKqLkN1RY87Q==",
   "success": true,
-  "projectFilePath": "D:\\AT&BM HTTT\\fsafsddsaf\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
+  "projectFilePath": "C:\\Users\\trang\\OneDrive\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ASUS\\.nuget\\packages\\oracle.manageddataaccess\\21.9.0\\oracle.manageddataaccess.21.9.0.nupkg.sha512",
-    "C:\\Users\\ASUS\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\ASUS\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\ASUS\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+    "C:\\Users\\trang\\.nuget\\packages\\oracle.manageddataaccess\\21.9.0\\oracle.manageddataaccess.21.9.0.nupkg.sha512",
+    "C:\\Users\\trang\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\trang\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\trang\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
   ],
   "logs": [
     {
