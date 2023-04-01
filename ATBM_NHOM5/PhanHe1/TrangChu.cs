@@ -16,7 +16,9 @@ namespace PhanHe1
         public TrangChu()
         {
             InitializeComponent();
+
         }
+
         private Form activeform = null;
         private void OpenChildForm(Form childForm)
         {

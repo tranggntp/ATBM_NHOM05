@@ -55,3 +55,35 @@ D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\re
 D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.pdb
 D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.genruntimeconfig.cache
 D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\ref\PhanHe1.dll
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\PhanHe1.exe
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\PhanHe1.deps.json
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\PhanHe1.runtimeconfig.json
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\PhanHe1.dll
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\PhanHe1.pdb
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.csproj.AssemblyReference.cache
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.PhanQuyenHeThong.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.QuanLiUser_Role.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.SuaRole.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.SuaUser.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.TaoUser.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.ThemRole.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.TrangChu.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.XemQuyenUser.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.XoaRole.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.XoaUser.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.csproj.GenerateResource.cache
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.GeneratedMSBuildEditorConfig.editorconfig
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.AssemblyInfoInputs.cache
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.AssemblyInfo.cs
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.csproj.CoreCompileInputs.cache
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.csproj.CopyComplete
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.dll
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\refint\PhanHe1.dll
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.pdb
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.genruntimeconfig.cache
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\ref\PhanHe1.dll
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll

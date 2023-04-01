@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AT&BM HTTT\\project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj": {}
+    "E:\\Project\\UNIVERSITY\\THIRD YEAR\\SECOND SEMESTER\\An toàn và bảo mật csdl\\Project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj": {}
   },
   "projects": {
-    "D:\\AT&BM HTTT\\project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj": {
+    "E:\\Project\\UNIVERSITY\\THIRD YEAR\\SECOND SEMESTER\\An toàn và bảo mật csdl\\Project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AT&BM HTTT\\project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
+        "projectUniqueName": "E:\\Project\\UNIVERSITY\\THIRD YEAR\\SECOND SEMESTER\\An toàn và bảo mật csdl\\Project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
         "projectName": "PhanHe1",
-        "projectPath": "D:\\AT&BM HTTT\\project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\AT&BM HTTT\\project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\obj\\",
+        "projectPath": "E:\\Project\\UNIVERSITY\\THIRD YEAR\\SECOND SEMESTER\\An toàn và bảo mật csdl\\Project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
+        "packagesPath": "C:\\Users\\dngba\\.nuget\\packages\\",
+        "outputPath": "E:\\Project\\UNIVERSITY\\THIRD YEAR\\SECOND SEMESTER\\An toàn và bảo mật csdl\\Project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dngba\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,9 +40,9 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
-            "Oracle.ManagedDataAccess": {
+            "Oracle.ManagedDataAccess.Core": {
               "target": "Package",
-              "version": "[21.9.0, )"
+              "version": "[3.21.50, )"
             }
           },
           "imports": [
@@ -64,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
