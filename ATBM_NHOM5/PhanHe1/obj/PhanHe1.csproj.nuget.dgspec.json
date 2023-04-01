@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Project\\UNIVERSITY\\THIRD YEAR\\SECOND SEMESTER\\An toàn và bảo mật csdl\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj": {}
+    "D:\\AT&BM HTTT\\fsafsddsaf\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj": {}
   },
   "projects": {
-    "E:\\Project\\UNIVERSITY\\THIRD YEAR\\SECOND SEMESTER\\An toàn và bảo mật csdl\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj": {
+    "D:\\AT&BM HTTT\\fsafsddsaf\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Project\\UNIVERSITY\\THIRD YEAR\\SECOND SEMESTER\\An toàn và bảo mật csdl\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
+        "projectUniqueName": "D:\\AT&BM HTTT\\fsafsddsaf\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
         "projectName": "PhanHe1",
-        "projectPath": "E:\\Project\\UNIVERSITY\\THIRD YEAR\\SECOND SEMESTER\\An toàn và bảo mật csdl\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
-        "packagesPath": "C:\\Users\\dngba\\.nuget\\packages\\",
-        "outputPath": "E:\\Project\\UNIVERSITY\\THIRD YEAR\\SECOND SEMESTER\\An toàn và bảo mật csdl\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\obj\\",
+        "projectPath": "D:\\AT&BM HTTT\\fsafsddsaf\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\AT&BM HTTT\\fsafsddsaf\\ATBM_NHOM5\\PhanHe1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dngba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Oracle.ManagedDataAccess": {
+              "target": "Package",
+              "version": "[21.9.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

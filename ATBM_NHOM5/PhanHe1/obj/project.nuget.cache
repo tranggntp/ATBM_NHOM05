@@ -1,8 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "kkjkFX5MmbjmUgxAI4OQ0DbdEblQ99HUxNVfXkAXApyO+pcd4vJFu7jK8E0Y3LpORKnSiDA8zfBtQYRJTxtnEg==",
+  "dgSpecHash": "KmoElPLARTEguQZcoMiJrB+QelouGSp16Tx4dhoOW5iV/1hL4a9arLZq4LmXduNSS7ZgeD3jL8pgccGxliLLLA==",
   "success": true,
-  "projectFilePath": "E:\\Project\\UNIVERSITY\\THIRD YEAR\\SECOND SEMESTER\\An toàn và bảo mật csdl\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "D:\\AT&BM HTTT\\fsafsddsaf\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\oracle.manageddataaccess\\21.9.0\\oracle.manageddataaccess.21.9.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Oracle.ManagedDataAccess 21.9.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Oracle.ManagedDataAccess",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }
