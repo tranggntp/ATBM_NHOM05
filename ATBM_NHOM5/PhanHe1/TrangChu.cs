@@ -59,6 +59,7 @@ namespace PhanHe1
             }
         }
 
+        //xem danh sách user
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -67,22 +68,26 @@ namespace PhanHe1
         private void dangxuat_Click(object sender, EventArgs e)
         {
             this.Close();
+            //t = new Thread(open_FormDangNhap);
+            //t.SetApartmentState(ApartmentState.STA);
+            //t.Start();
         }
 
         private void RoleXemQuyen_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new TaoUser());
-            ActivateButton(sender);
+            
         }
 
         private void UserXemQuyen_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new XemQuyenUser());
+            ActivateButton(sender);
         }
 
         private void QuanLyUserRole_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new QuanLiUser_Role());
+            ActivateButton(sender);
         }
 
         private void PQQTTable_Click(object sender, EventArgs e)
@@ -97,7 +102,8 @@ namespace PhanHe1
 
         private void PQHthong_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new PhanQuyenHeThong());
+            ActivateButton(sender);
         }
 
         private void UserThuHoiQuyen_Click(object sender, EventArgs e)

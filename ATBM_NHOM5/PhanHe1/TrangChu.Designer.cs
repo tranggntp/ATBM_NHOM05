@@ -45,9 +45,9 @@
             // 
             // danhsachUser
             // 
-            this.danhsachUser.Location = new System.Drawing.Point(31, 16);
+            this.danhsachUser.Location = new System.Drawing.Point(19, 16);
             this.danhsachUser.Name = "danhsachUser";
-            this.danhsachUser.Size = new System.Drawing.Size(118, 71);
+            this.danhsachUser.Size = new System.Drawing.Size(161, 71);
             this.danhsachUser.TabIndex = 0;
             this.danhsachUser.Text = "danh sach User";
             this.danhsachUser.UseVisualStyleBackColor = true;
@@ -66,17 +66,18 @@
             this.PanelMenu.Controls.Add(this.RoleXemQuyen);
             this.PanelMenu.Controls.Add(this.UserXemQuyen);
             this.PanelMenu.Controls.Add(this.danhsachUser);
-            this.PanelMenu.Location = new System.Drawing.Point(13, 13);
+            this.PanelMenu.Location = new System.Drawing.Point(-6, -3);
             this.PanelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(1190, 172);
+            this.PanelMenu.Size = new System.Drawing.Size(1245, 200);
             this.PanelMenu.TabIndex = 1;
             // 
             // dangxuat
             // 
-            this.dangxuat.Location = new System.Drawing.Point(1006, 98);
+            this.dangxuat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.dangxuat.Location = new System.Drawing.Point(1040, 142);
             this.dangxuat.Name = "dangxuat";
-            this.dangxuat.Size = new System.Drawing.Size(172, 71);
+            this.dangxuat.Size = new System.Drawing.Size(154, 51);
             this.dangxuat.TabIndex = 9;
             this.dangxuat.Text = "dangxuat";
             this.dangxuat.UseVisualStyleBackColor = true;
@@ -84,7 +85,7 @@
             // 
             // RoleThuHoiQuyen
             // 
-            this.RoleThuHoiQuyen.Location = new System.Drawing.Point(364, 93);
+            this.RoleThuHoiQuyen.Location = new System.Drawing.Point(643, 111);
             this.RoleThuHoiQuyen.Name = "RoleThuHoiQuyen";
             this.RoleThuHoiQuyen.Size = new System.Drawing.Size(189, 71);
             this.RoleThuHoiQuyen.TabIndex = 8;
@@ -94,7 +95,7 @@
             // 
             // UserThuHoiQuyen
             // 
-            this.UserThuHoiQuyen.Location = new System.Drawing.Point(186, 93);
+            this.UserThuHoiQuyen.Location = new System.Drawing.Point(432, 111);
             this.UserThuHoiQuyen.Name = "UserThuHoiQuyen";
             this.UserThuHoiQuyen.Size = new System.Drawing.Size(172, 71);
             this.UserThuHoiQuyen.TabIndex = 7;
@@ -104,7 +105,7 @@
             // 
             // PQHthong
             // 
-            this.PQHthong.Location = new System.Drawing.Point(20, 93);
+            this.PQHthong.Location = new System.Drawing.Point(243, 111);
             this.PQHthong.Name = "PQHthong";
             this.PQHthong.Size = new System.Drawing.Size(156, 71);
             this.PQHthong.TabIndex = 6;
@@ -114,7 +115,7 @@
             // 
             // PQUsertoRole
             // 
-            this.PQUsertoRole.Location = new System.Drawing.Point(869, 16);
+            this.PQUsertoRole.Location = new System.Drawing.Point(37, 111);
             this.PQUsertoRole.Name = "PQUsertoRole";
             this.PQUsertoRole.Size = new System.Drawing.Size(156, 71);
             this.PQUsertoRole.TabIndex = 5;
@@ -124,7 +125,7 @@
             // 
             // PQQTTable
             // 
-            this.PQQTTable.Location = new System.Drawing.Point(687, 16);
+            this.PQQTTable.Location = new System.Drawing.Point(816, 16);
             this.PQQTTable.Name = "PQQTTable";
             this.PQQTTable.Size = new System.Drawing.Size(156, 71);
             this.PQQTTable.TabIndex = 4;
@@ -134,7 +135,7 @@
             // 
             // QuanLyUserRole
             // 
-            this.QuanLyUserRole.Location = new System.Drawing.Point(510, 16);
+            this.QuanLyUserRole.Location = new System.Drawing.Point(609, 16);
             this.QuanLyUserRole.Name = "QuanLyUserRole";
             this.QuanLyUserRole.Size = new System.Drawing.Size(156, 71);
             this.QuanLyUserRole.TabIndex = 3;
@@ -144,7 +145,7 @@
             // 
             // RoleXemQuyen
             // 
-            this.RoleXemQuyen.Location = new System.Drawing.Point(348, 16);
+            this.RoleXemQuyen.Location = new System.Drawing.Point(402, 16);
             this.RoleXemQuyen.Name = "RoleXemQuyen";
             this.RoleXemQuyen.Size = new System.Drawing.Size(156, 71);
             this.RoleXemQuyen.TabIndex = 2;
@@ -154,7 +155,7 @@
             // 
             // UserXemQuyen
             // 
-            this.UserXemQuyen.Location = new System.Drawing.Point(186, 16);
+            this.UserXemQuyen.Location = new System.Drawing.Point(209, 16);
             this.UserXemQuyen.Name = "UserXemQuyen";
             this.UserXemQuyen.Size = new System.Drawing.Size(156, 71);
             this.UserXemQuyen.TabIndex = 1;
@@ -164,7 +165,7 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Location = new System.Drawing.Point(3, 193);
+            this.panelChildForm.Location = new System.Drawing.Point(13, 197);
             this.panelChildForm.Margin = new System.Windows.Forms.Padding(4);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1200, 600);
@@ -174,10 +175,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1216, 805);
+            this.ClientSize = new System.Drawing.Size(1238, 810);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.PanelMenu);
             this.Name = "TrangChu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangChu";
             this.PanelMenu.ResumeLayout(false);
             this.ResumeLayout(false);

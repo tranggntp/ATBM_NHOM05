@@ -25,3 +25,5 @@ C:\Users\trang\OneDrive\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\
 C:\Users\trang\OneDrive\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.pdb
 C:\Users\trang\OneDrive\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.genruntimeconfig.cache
 C:\Users\trang\OneDrive\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\ref\PhanHe1.dll
+C:\Users\trang\OneDrive\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.PhanQuyenHeThong.resources
+C:\Users\trang\OneDrive\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.XemQuyenUser.resources
