@@ -13,7 +13,8 @@ namespace PhanHe1
         public static OracleConnection Con;
 
         // sửa lại host name theo máy
-        private static string host_name = @"DESKTOP-J4KC12Q";
+        private static string host_name = @"pc";
+
 
         public static void InitConnection(String username, String password)
         {
@@ -27,10 +28,10 @@ namespace PhanHe1
             {
                 Con.Open();
 
-                if (Con.State == ConnectionState.Open)
-                {
-                    MessageBox.Show("Kết nối DB thành công");
-                }
+                //if (Con.State == ConnectionState.Open)
+                //{
+                //    MessageBox.Show("Kết nối DB thành công");
+                //}
 
             }
             catch (OracleException ex)

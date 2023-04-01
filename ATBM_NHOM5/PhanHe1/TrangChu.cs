@@ -13,10 +13,9 @@ namespace PhanHe1
     public partial class TrangChu : Form
     {
         Thread t;
-        public TrangChu()
+        public TrangChu(string username, string password)
         {
             InitializeComponent();
-
         }
 
         private Form activeform = null;
@@ -61,18 +60,23 @@ namespace PhanHe1
             }
         }
 
+
         //xem danh sách user
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
+        public void DangNhapLai()
+        {
+            Application.Run(new DangNhap());
+        }
         private void dangxuat_Click(object sender, EventArgs e)
         {
             this.Close();
-            //t = new Thread(open_FormDangNhap);
-            //t.SetApartmentState(ApartmentState.STA);
-            //t.Start();
+            t = new Thread(DangNhapLai);
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
         }
 
         private void RoleXemQuyen_Click(object sender, EventArgs e)
