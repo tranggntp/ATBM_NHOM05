@@ -12,12 +12,100 @@ namespace PhanHe1
 {
     public partial class TrangChu : Form
     {
+        Thread t;
         public TrangChu()
         {
             InitializeComponent();
         }
+        private Form activeform = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeform != null)
+                activeform.Close();
+            activeform = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        // xử lí chuyển màu khi click vào button
+        private Button currentButton;
+        private void DisableButton()
+        {
+            foreach (Control previousBtn in PanelMenu.Controls)
+            {
+                if (previousBtn.GetType() == typeof(Button))
+                {
+                    previousBtn.BackColor = Color.FromArgb(39, 39, 58);
+                    previousBtn.ForeColor = Color.Gainsboro;
+                }
+            }
+        }
+        private void ActivateButton(object btnSender)
+        {
+            if (btnSender != null)
+            {
+                if (currentButton != (Button)btnSender)
+                {
+                    DisableButton();
+                    Color color = ColorTranslator.FromHtml("#3f75a2");
+                    currentButton = (Button)btnSender;
+                    currentButton.BackColor = color;
+                    currentButton.ForeColor = Color.White;
+                }
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dangxuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void RoleXemQuyen_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TaoUser());
+            ActivateButton(sender);
+        }
+
+        private void UserXemQuyen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QuanLyUserRole_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PQQTTable_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PQUsertoRole_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PQHthong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserThuHoiQuyen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RoleThuHoiQuyen_Click(object sender, EventArgs e)
         {
 
         }

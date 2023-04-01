@@ -28,33 +28,175 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.danhsachUser = new System.Windows.Forms.Button();
+            this.PanelMenu = new System.Windows.Forms.Panel();
+            this.dangxuat = new System.Windows.Forms.Button();
+            this.RoleThuHoiQuyen = new System.Windows.Forms.Button();
+            this.UserThuHoiQuyen = new System.Windows.Forms.Button();
+            this.PQHthong = new System.Windows.Forms.Button();
+            this.PQUsertoRole = new System.Windows.Forms.Button();
+            this.PQQTTable = new System.Windows.Forms.Button();
+            this.QuanLyUserRole = new System.Windows.Forms.Button();
+            this.RoleXemQuyen = new System.Windows.Forms.Button();
+            this.UserXemQuyen = new System.Windows.Forms.Button();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.PanelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // danhsachUser
             // 
-            this.button1.Location = new System.Drawing.Point(250, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.danhsachUser.Location = new System.Drawing.Point(31, 16);
+            this.danhsachUser.Name = "danhsachUser";
+            this.danhsachUser.Size = new System.Drawing.Size(118, 71);
+            this.danhsachUser.TabIndex = 0;
+            this.danhsachUser.Text = "danh sach User";
+            this.danhsachUser.UseVisualStyleBackColor = true;
+            this.danhsachUser.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // PanelMenu
+            // 
+            this.PanelMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PanelMenu.Controls.Add(this.dangxuat);
+            this.PanelMenu.Controls.Add(this.RoleThuHoiQuyen);
+            this.PanelMenu.Controls.Add(this.UserThuHoiQuyen);
+            this.PanelMenu.Controls.Add(this.PQHthong);
+            this.PanelMenu.Controls.Add(this.PQUsertoRole);
+            this.PanelMenu.Controls.Add(this.PQQTTable);
+            this.PanelMenu.Controls.Add(this.QuanLyUserRole);
+            this.PanelMenu.Controls.Add(this.RoleXemQuyen);
+            this.PanelMenu.Controls.Add(this.UserXemQuyen);
+            this.PanelMenu.Controls.Add(this.danhsachUser);
+            this.PanelMenu.Location = new System.Drawing.Point(13, 13);
+            this.PanelMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.PanelMenu.Name = "PanelMenu";
+            this.PanelMenu.Size = new System.Drawing.Size(1190, 172);
+            this.PanelMenu.TabIndex = 1;
+            // 
+            // dangxuat
+            // 
+            this.dangxuat.Location = new System.Drawing.Point(1006, 98);
+            this.dangxuat.Name = "dangxuat";
+            this.dangxuat.Size = new System.Drawing.Size(172, 71);
+            this.dangxuat.TabIndex = 9;
+            this.dangxuat.Text = "dangxuat";
+            this.dangxuat.UseVisualStyleBackColor = true;
+            this.dangxuat.Click += new System.EventHandler(this.dangxuat_Click);
+            // 
+            // RoleThuHoiQuyen
+            // 
+            this.RoleThuHoiQuyen.Location = new System.Drawing.Point(364, 93);
+            this.RoleThuHoiQuyen.Name = "RoleThuHoiQuyen";
+            this.RoleThuHoiQuyen.Size = new System.Drawing.Size(189, 71);
+            this.RoleThuHoiQuyen.TabIndex = 8;
+            this.RoleThuHoiQuyen.Text = "RoleThuHoiQuyen";
+            this.RoleThuHoiQuyen.UseVisualStyleBackColor = true;
+            this.RoleThuHoiQuyen.Click += new System.EventHandler(this.RoleThuHoiQuyen_Click);
+            // 
+            // UserThuHoiQuyen
+            // 
+            this.UserThuHoiQuyen.Location = new System.Drawing.Point(186, 93);
+            this.UserThuHoiQuyen.Name = "UserThuHoiQuyen";
+            this.UserThuHoiQuyen.Size = new System.Drawing.Size(172, 71);
+            this.UserThuHoiQuyen.TabIndex = 7;
+            this.UserThuHoiQuyen.Text = "UserThuHoiQuyen";
+            this.UserThuHoiQuyen.UseVisualStyleBackColor = true;
+            this.UserThuHoiQuyen.Click += new System.EventHandler(this.UserThuHoiQuyen_Click);
+            // 
+            // PQHthong
+            // 
+            this.PQHthong.Location = new System.Drawing.Point(20, 93);
+            this.PQHthong.Name = "PQHthong";
+            this.PQHthong.Size = new System.Drawing.Size(156, 71);
+            this.PQHthong.TabIndex = 6;
+            this.PQHthong.Text = "PQHthong";
+            this.PQHthong.UseVisualStyleBackColor = true;
+            this.PQHthong.Click += new System.EventHandler(this.PQHthong_Click);
+            // 
+            // PQUsertoRole
+            // 
+            this.PQUsertoRole.Location = new System.Drawing.Point(869, 16);
+            this.PQUsertoRole.Name = "PQUsertoRole";
+            this.PQUsertoRole.Size = new System.Drawing.Size(156, 71);
+            this.PQUsertoRole.TabIndex = 5;
+            this.PQUsertoRole.Text = "PQUsertoRole";
+            this.PQUsertoRole.UseVisualStyleBackColor = true;
+            this.PQUsertoRole.Click += new System.EventHandler(this.PQUsertoRole_Click);
+            // 
+            // PQQTTable
+            // 
+            this.PQQTTable.Location = new System.Drawing.Point(687, 16);
+            this.PQQTTable.Name = "PQQTTable";
+            this.PQQTTable.Size = new System.Drawing.Size(156, 71);
+            this.PQQTTable.TabIndex = 4;
+            this.PQQTTable.Text = "PQQTTable";
+            this.PQQTTable.UseVisualStyleBackColor = true;
+            this.PQQTTable.Click += new System.EventHandler(this.PQQTTable_Click);
+            // 
+            // QuanLyUserRole
+            // 
+            this.QuanLyUserRole.Location = new System.Drawing.Point(510, 16);
+            this.QuanLyUserRole.Name = "QuanLyUserRole";
+            this.QuanLyUserRole.Size = new System.Drawing.Size(156, 71);
+            this.QuanLyUserRole.TabIndex = 3;
+            this.QuanLyUserRole.Text = "QuanLyUserRole";
+            this.QuanLyUserRole.UseVisualStyleBackColor = true;
+            this.QuanLyUserRole.Click += new System.EventHandler(this.QuanLyUserRole_Click);
+            // 
+            // RoleXemQuyen
+            // 
+            this.RoleXemQuyen.Location = new System.Drawing.Point(348, 16);
+            this.RoleXemQuyen.Name = "RoleXemQuyen";
+            this.RoleXemQuyen.Size = new System.Drawing.Size(156, 71);
+            this.RoleXemQuyen.TabIndex = 2;
+            this.RoleXemQuyen.Text = "RoleXemQuyen";
+            this.RoleXemQuyen.UseVisualStyleBackColor = true;
+            this.RoleXemQuyen.Click += new System.EventHandler(this.RoleXemQuyen_Click);
+            // 
+            // UserXemQuyen
+            // 
+            this.UserXemQuyen.Location = new System.Drawing.Point(186, 16);
+            this.UserXemQuyen.Name = "UserXemQuyen";
+            this.UserXemQuyen.Size = new System.Drawing.Size(156, 71);
+            this.UserXemQuyen.TabIndex = 1;
+            this.UserXemQuyen.Text = "UserXemQuyen";
+            this.UserXemQuyen.UseVisualStyleBackColor = true;
+            this.UserXemQuyen.Click += new System.EventHandler(this.UserXemQuyen_Click);
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Location = new System.Drawing.Point(3, 193);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1200, 600);
+            this.panelChildForm.TabIndex = 2;
             // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1216, 805);
+            this.Controls.Add(this.panelChildForm);
+            this.Controls.Add(this.PanelMenu);
             this.Name = "TrangChu";
             this.Text = "TrangChu";
+            this.PanelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Button button1;
+        private Button danhsachUser;
+        private Panel PanelMenu;
+        private Panel panelChildForm;
+        private Button PQQTTable;
+        private Button QuanLyUserRole;
+        private Button RoleXemQuyen;
+        private Button UserXemQuyen;
+        private Button dangxuat;
+        private Button RoleThuHoiQuyen;
+        private Button UserThuHoiQuyen;
+        private Button PQHthong;
+        private Button PQUsertoRole;
     }
 }
