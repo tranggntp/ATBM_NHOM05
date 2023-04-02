@@ -16,5 +16,10 @@ namespace PhanHe1
         {
             InitializeComponent();
         }
+
+        private void Username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
