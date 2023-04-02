@@ -81,7 +81,7 @@ namespace PhanHe1
 
         private void RoleXemQuyen_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void UserXemQuyen_Click(object sender, EventArgs e)
