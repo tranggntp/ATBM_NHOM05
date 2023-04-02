@@ -16,5 +16,7 @@ namespace PhanHe1
         {
             InitializeComponent();
         }
+
+        int lmao = 0;
     }
 }
