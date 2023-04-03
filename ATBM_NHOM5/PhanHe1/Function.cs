@@ -58,7 +58,6 @@ namespace PhanHe1
                 MessageBox.Show("Đóng kết nối với DB");
             }
         }
-
         public static void RunSQL(string sql) // chạy câu lệnh sql
         {
             OracleCommand cmd = new OracleCommand();
