@@ -16,5 +16,10 @@ namespace PhanHe1
         {
             InitializeComponent();
         }
+
+        private void CreateUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

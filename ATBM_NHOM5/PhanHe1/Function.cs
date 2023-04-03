@@ -13,7 +13,7 @@ namespace PhanHe1
         public static OracleConnection Con;
 
         // sửa lại host name theo máy
-        private static string host_name = @"qthang";
+        private static string host_name = @"DESKTOP-J4KC12Q";
 
 
         public static void InitConnection(String username, String password)
@@ -56,5 +56,49 @@ namespace PhanHe1
                 MessageBox.Show("Đóng kết nối với DB");
             }
         }
+
+        public static void RunSQL(string sql) // chạy câu lệnh sql
+        {
+            OracleCommand cmd = new OracleCommand();
+
+            //Gán kết nối
+            cmd.Connection = Con;
+
+            //Gán lệnh SQL
+            cmd.CommandText = sql;
+
+            //Thực hiện câu lệnh SQL
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            //Giải phóng bộ nhớ
+            cmd.Dispose();
+            cmd = null;
+        }
+
+        public static void FillComboBox(string sql, ComboBox comboBox)
+        {
+            OracleCommand command = new OracleCommand();
+            command.CommandText = sql;
+            command.Connection = Con;
+
+            OracleDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                for (int i = 0; i < reader.FieldCount; i++)
+                {
+                    comboBox.Items.Add(reader.GetString(i));
+                }
+            }
+            command.Dispose();
+            command = null;
+        }
+
     }
 }

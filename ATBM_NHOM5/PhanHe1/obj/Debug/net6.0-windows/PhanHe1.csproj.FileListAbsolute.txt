@@ -153,3 +153,7 @@ C:\Users\ASUS\Desktop\ATBM\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windo
 C:\Users\ASUS\Desktop\ATBM\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.pdb
 C:\Users\ASUS\Desktop\ATBM\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.genruntimeconfig.cache
 C:\Users\ASUS\Desktop\ATBM\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\ref\PhanHe1.dll
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.DangNhap.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.PhanQuyenUserToRole.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.ThuHoiQuyenUser.resources
+E:\Project\UNIVERSITY\THIRD YEAR\SECOND SEMESTER\An toàn và bảo mật csdl\Project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.XemDsNguoiDung.resources
