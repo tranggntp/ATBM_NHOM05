@@ -27,10 +27,8 @@ namespace PhanHe1
         }
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            //username = Username.Text.Trim().ToString();
-            //password = Password.Text.Trim().ToString();
-            username = "U_AD";
-            password = "0";
+            username = "AD_N5";
+            password = "abc";
 
             // nếu chưa có dữ liệu 
             if (username.Length == 0 | password.Length == 0)
@@ -41,9 +39,9 @@ namespace PhanHe1
             
             Login(username, password);
             //U_AD
-            if (username.Substring(2) == "AD")
+            //if (username.Substring(2) == "AD")
             //AD_1
-            //if (username.Substring(0,2) == "AD")
+            if (username.Contains("AD"))
             {
                 this.Close();
                 t = new Thread(MoFormAdmin);

@@ -108,7 +108,7 @@ namespace PhanHe1
 
         private void CapQuyen_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new TaoUser());
+            OpenChildForm(new PhanQuyenHeThong());
             ActivateButton(sender);
         }
 

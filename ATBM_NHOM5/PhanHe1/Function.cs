@@ -13,7 +13,9 @@ namespace PhanHe1
         public static OracleConnection Con;
 
         // sửa lại host name theo máy
-        private static string host_name = @"pc";
+        //private static string host_name = @"pc";
+
+        private static string host_name = @"DESKTOP-J4KC12Q";
 
 
         public static void InitConnection(String username, String password)
