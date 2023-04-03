@@ -72,5 +72,10 @@ namespace PhanHe1
             MessageBox.Show(query);
             Functions.RunSQL(query);
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
