@@ -47,31 +47,19 @@
             this.panel1.Controls.Add(this.xoauser);
             this.panel1.Controls.Add(this.themuser);
             this.panel1.Controls.Add(this.label1);
-<<<<<<< HEAD
             this.panel1.Location = new System.Drawing.Point(15, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(481, 532);
-=======
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(385, 426);
->>>>>>> main
             this.panel1.TabIndex = 0;
             // 
             // suauser
             // 
             this.suauser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-<<<<<<< HEAD
             this.suauser.Location = new System.Drawing.Point(206, 393);
             this.suauser.Margin = new System.Windows.Forms.Padding(4);
             this.suauser.Name = "suauser";
             this.suauser.Size = new System.Drawing.Size(190, 66);
-=======
-            this.suauser.Location = new System.Drawing.Point(103, 313);
-            this.suauser.Name = "suauser";
-            this.suauser.Size = new System.Drawing.Size(152, 53);
->>>>>>> main
             this.suauser.TabIndex = 3;
             this.suauser.Text = "SỬA";
             this.suauser.UseVisualStyleBackColor = true;
@@ -80,16 +68,10 @@
             // xoauser
             // 
             this.xoauser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-<<<<<<< HEAD
             this.xoauser.Location = new System.Drawing.Point(206, 272);
             this.xoauser.Margin = new System.Windows.Forms.Padding(4);
             this.xoauser.Name = "xoauser";
             this.xoauser.Size = new System.Drawing.Size(190, 66);
-=======
-            this.xoauser.Location = new System.Drawing.Point(103, 216);
-            this.xoauser.Name = "xoauser";
-            this.xoauser.Size = new System.Drawing.Size(152, 53);
->>>>>>> main
             this.xoauser.TabIndex = 2;
             this.xoauser.Text = "XÓA";
             this.xoauser.UseVisualStyleBackColor = true;
@@ -98,16 +80,10 @@
             // themuser
             // 
             this.themuser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-<<<<<<< HEAD
             this.themuser.Location = new System.Drawing.Point(206, 156);
             this.themuser.Margin = new System.Windows.Forms.Padding(4);
             this.themuser.Name = "themuser";
             this.themuser.Size = new System.Drawing.Size(190, 66);
-=======
-            this.themuser.Location = new System.Drawing.Point(103, 123);
-            this.themuser.Name = "themuser";
-            this.themuser.Size = new System.Drawing.Size(152, 53);
->>>>>>> main
             this.themuser.TabIndex = 1;
             this.themuser.Text = "THÊM ";
             this.themuser.UseVisualStyleBackColor = true;
@@ -117,16 +93,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(128, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(349, 65);
-=======
-            this.label1.Location = new System.Drawing.Point(41, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 54);
->>>>>>> main
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ USER";
             // 
@@ -135,31 +105,19 @@
             this.panel2.Controls.Add(this.xoarole);
             this.panel2.Controls.Add(this.themrole);
             this.panel2.Controls.Add(this.label2);
-<<<<<<< HEAD
             this.panel2.Location = new System.Drawing.Point(501, 15);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(481, 532);
-=======
-            this.panel2.Location = new System.Drawing.Point(401, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(385, 426);
->>>>>>> main
             this.panel2.TabIndex = 1;
             // 
             // xoarole
             // 
             this.xoarole.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-<<<<<<< HEAD
             this.xoarole.Location = new System.Drawing.Point(198, 341);
             this.xoarole.Margin = new System.Windows.Forms.Padding(4);
             this.xoarole.Name = "xoarole";
             this.xoarole.Size = new System.Drawing.Size(190, 66);
-=======
-            this.xoarole.Location = new System.Drawing.Point(121, 267);
-            this.xoarole.Name = "xoarole";
-            this.xoarole.Size = new System.Drawing.Size(152, 53);
->>>>>>> main
             this.xoarole.TabIndex = 4;
             this.xoarole.Text = "XÓA";
             this.xoarole.UseVisualStyleBackColor = true;
@@ -168,16 +126,10 @@
             // themrole
             // 
             this.themrole.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-<<<<<<< HEAD
             this.themrole.Location = new System.Drawing.Point(198, 199);
             this.themrole.Margin = new System.Windows.Forms.Padding(4);
             this.themrole.Name = "themrole";
             this.themrole.Size = new System.Drawing.Size(190, 66);
-=======
-            this.themrole.Location = new System.Drawing.Point(121, 154);
-            this.themrole.Name = "themrole";
-            this.themrole.Size = new System.Drawing.Size(152, 53);
->>>>>>> main
             this.themrole.TabIndex = 4;
             this.themrole.Text = "THÊM ";
             this.themrole.UseVisualStyleBackColor = true;
@@ -187,36 +139,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(96, 56);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(349, 65);
-=======
-            this.label2.Location = new System.Drawing.Point(39, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(290, 54);
->>>>>>> main
             this.label2.TabIndex = 1;
             this.label2.Text = "QUẢN LÝ ROLE";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // QuanLiUser_Role
             // 
-<<<<<<< HEAD
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 562);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
-=======
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
->>>>>>> main
             this.Name = "QuanLiUser_Role";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);

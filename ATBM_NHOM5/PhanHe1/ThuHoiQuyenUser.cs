@@ -19,11 +19,6 @@ namespace PhanHe1
 
         private void label2_Click(object sender, EventArgs e)
         {
-            //lmao lmao lmao
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
 
         }
     }
