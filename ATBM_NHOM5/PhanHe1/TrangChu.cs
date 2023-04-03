@@ -56,7 +56,7 @@ namespace PhanHe1
                     now_btn = (Button)btnSender;
                     now_btn.BackColor = color;
                     now_btn.ForeColor = Color.White;
-              
+
                 }
             }
         }

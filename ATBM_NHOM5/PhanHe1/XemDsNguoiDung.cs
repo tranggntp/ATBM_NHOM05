@@ -27,6 +27,7 @@ namespace PhanHe1
         private void LoadData_ListUsers()
         {
             string sql = "SELECT USERNAME, USER_ID, ACCOUNT_STATUS, CREATED  FROM dba_users ORDER BY CREATED DESC";
+
             dtTableName = Functions.GetDataToTable(sql);
             dataGridView1.DataSource = dtTableName;
             // set Font cho tên cột
@@ -53,10 +54,15 @@ namespace PhanHe1
             dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
 
-        
+
         private void XemDsNguoiDung_Load(object sender, EventArgs e)
         {
             LoadData_ListUsers();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
