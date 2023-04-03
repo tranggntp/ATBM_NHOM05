@@ -15,8 +15,8 @@ namespace PhanHe1
         // sửa lại host name theo máy
         //private static string host_name = @"pc";
 
-        private static string host_name = @"DESKTOP-J4KC12Q";
-
+        //private static string host_name = @"DESKTOP-J4KC12Q";
+        private static string host_name = @"qthang";
 
         public static void InitConnection(String username, String password)
         {

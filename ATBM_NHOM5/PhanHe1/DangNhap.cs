@@ -32,8 +32,8 @@ namespace PhanHe1
         }
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            username = "AD_N5";
-            password = "abc";
+            username = "U_AD";
+            password = "0";
 
             // nếu chưa có dữ liệu 
             if (username.Length == 0 | password.Length == 0)

@@ -28,90 +28,94 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.CreateRole = new System.Windows.Forms.Button();
-            this.RoleName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            button1 = new Button();
+            panel1 = new Panel();
+            CreateRole = new Button();
+            RoleName = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(694, 421);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Trở về";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(1040, 419);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(82, 22);
+            button1.TabIndex = 3;
+            button1.Text = "Trở về";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.CreateRole);
-            this.panel1.Controls.Add(this.RoleName);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(44, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(723, 403);
-            this.panel1.TabIndex = 2;
+            panel1.Controls.Add(CreateRole);
+            panel1.Controls.Add(RoleName);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(38, 9);
+            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1084, 302);
+            panel1.TabIndex = 2;
             // 
             // CreateRole
             // 
-            this.CreateRole.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CreateRole.Location = new System.Drawing.Point(316, 294);
-            this.CreateRole.Name = "CreateRole";
-            this.CreateRole.Size = new System.Drawing.Size(105, 39);
-            this.CreateRole.TabIndex = 5;
-            this.CreateRole.Text = "Thêm";
-            this.CreateRole.UseVisualStyleBackColor = true;
-            this.CreateRole.Click += new System.EventHandler(this.CreateRole_Click);
+            CreateRole.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            CreateRole.Location = new Point(493, 202);
+            CreateRole.Margin = new Padding(3, 2, 3, 2);
+            CreateRole.Name = "CreateRole";
+            CreateRole.Size = new Size(92, 29);
+            CreateRole.TabIndex = 5;
+            CreateRole.Text = "Thêm";
+            CreateRole.UseVisualStyleBackColor = true;
+            CreateRole.Click += CreateRole_Click;
             // 
             // RoleName
             // 
-            this.RoleName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RoleName.Location = new System.Drawing.Point(352, 168);
-            this.RoleName.Name = "RoleName";
-            this.RoleName.Size = new System.Drawing.Size(260, 39);
-            this.RoleName.TabIndex = 2;
+            RoleName.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            RoleName.Location = new Point(430, 111);
+            RoleName.Margin = new Padding(3, 2, 3, 2);
+            RoleName.Name = "RoleName";
+            RoleName.Size = new Size(228, 32);
+            RoleName.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(143, 175);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 32);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "RoleName";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(229, 118);
+            label2.Name = "label2";
+            label2.Size = new Size(98, 25);
+            label2.TabIndex = 1;
+            label2.Text = "RoleName";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(256, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 54);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "TẠO ROLE";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(465, 11);
+            label1.Name = "label1";
+            label1.Size = new Size(165, 45);
+            label1.TabIndex = 0;
+            label1.Text = "TẠO ROLE";
+            label1.Click += label1_Click;
             // 
             // ThemRole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
-            this.Name = "ThemRole";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ThemRole";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1176, 471);
+            Controls.Add(button1);
+            Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "ThemRole";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ThemRole";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

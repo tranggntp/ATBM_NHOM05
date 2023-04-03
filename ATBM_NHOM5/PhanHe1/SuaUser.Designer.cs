@@ -28,112 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.NewPass = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.EditUser = new System.Windows.Forms.Button();
-            this.Username = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            button1 = new Button();
+            panel1 = new Panel();
+            NewPass = new TextBox();
+            label3 = new Label();
+            EditUser = new Button();
+            Username = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(694, 409);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Trở về";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(1056, 428);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(82, 22);
+            button1.TabIndex = 5;
+            button1.Text = "Trở về";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.NewPass);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.EditUser);
-            this.panel1.Controls.Add(this.Username);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(35, 26);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(727, 372);
-            this.panel1.TabIndex = 4;
+            panel1.Controls.Add(NewPass);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(EditUser);
+            panel1.Controls.Add(Username);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(31, 20);
+            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1107, 279);
+            panel1.TabIndex = 4;
             // 
             // NewPass
             // 
-            this.NewPass.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NewPass.Location = new System.Drawing.Point(288, 187);
-            this.NewPass.Name = "NewPass";
-            this.NewPass.PasswordChar = '•';
-            this.NewPass.Size = new System.Drawing.Size(316, 39);
-            this.NewPass.TabIndex = 7;
+            NewPass.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            NewPass.Location = new Point(415, 139);
+            NewPass.Margin = new Padding(3, 2, 3, 2);
+            NewPass.Name = "NewPass";
+            NewPass.PasswordChar = '•';
+            NewPass.Size = new Size(277, 32);
+            NewPass.TabIndex = 7;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(90, 194);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 32);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Password mới";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(226, 146);
+            label3.Name = "label3";
+            label3.Size = new Size(128, 25);
+            label3.TabIndex = 6;
+            label3.Text = "Password mới";
             // 
             // EditUser
             // 
-            this.EditUser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EditUser.Location = new System.Drawing.Point(309, 291);
-            this.EditUser.Name = "EditUser";
-            this.EditUser.Size = new System.Drawing.Size(105, 39);
-            this.EditUser.TabIndex = 5;
-            this.EditUser.Text = "Sửa";
-            this.EditUser.UseVisualStyleBackColor = true;
-            this.EditUser.Click += new System.EventHandler(this.DeleteUser_Click);
+            EditUser.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            EditUser.Location = new Point(507, 218);
+            EditUser.Margin = new Padding(3, 2, 3, 2);
+            EditUser.Name = "EditUser";
+            EditUser.Size = new Size(92, 29);
+            EditUser.TabIndex = 5;
+            EditUser.Text = "Sửa";
+            EditUser.UseVisualStyleBackColor = true;
+            EditUser.Click += DeleteUser_Click;
             // 
             // Username
             // 
-            this.Username.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Username.Location = new System.Drawing.Point(288, 111);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(316, 39);
-            this.Username.TabIndex = 2;
+            Username.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            Username.Location = new Point(415, 81);
+            Username.Margin = new Padding(3, 2, 3, 2);
+            Username.Name = "Username";
+            Username.Size = new Size(277, 32);
+            Username.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(90, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 32);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Username";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(226, 88);
+            label2.Name = "label2";
+            label2.Size = new Size(97, 25);
+            label2.TabIndex = 1;
+            label2.Text = "Username";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(268, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 54);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "SỬA USER";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(475, 13);
+            label1.Name = "label1";
+            label1.Size = new Size(164, 45);
+            label1.TabIndex = 0;
+            label1.Text = "SỬA USER";
             // 
             // SuaUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
-            this.Name = "SuaUser";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SuaUser";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1176, 471);
+            Controls.Add(button1);
+            Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "SuaUser";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "SuaUser";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

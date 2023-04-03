@@ -28,7 +28,7 @@ namespace PhanHe1
         private void DeleteUser_Click(object sender, EventArgs e)
         {
             // kiem tra text box username da duoc nhap du lieu hay chua
-            if (Username.Text.Trim().Length == 0||NewPass.Text.Trim().Length == 0)
+            if (Username.Text.Trim().Length == 0 || NewPass.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Hãy nhập đầy đủ thông tin", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -44,11 +44,11 @@ namespace PhanHe1
             }
             string sql = "ALTER SESSION SET \"_ORACLE_SCRIPT\" = TRUE";
             Functions.RunSQL(sql);
-            U_name = Username.Text.Trim().ToString(); 
+            U_name = Username.Text.Trim().ToString();
             U_pass = NewPass.Text.Trim().ToString();
-           // thực hiện câu lệnh sql
+            // thực hiện câu lệnh sql
             sql = "ALTER USER " + U_name + " IDENTIFIED BY " + U_pass;
-            
+
             if (Functions.RunSQLwithResult(sql) == 1)
             {
                 MessageBox.Show("Thay đổi password thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

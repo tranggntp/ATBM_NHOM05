@@ -42,7 +42,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(253, 65);
+            label1.Location = new Point(465, 55);
             label1.Name = "label1";
             label1.Size = new Size(254, 32);
             label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(143, 134);
+            label2.Location = new Point(331, 129);
             label2.Name = "label2";
             label2.Size = new Size(48, 25);
             label2.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(143, 187);
+            label3.Location = new Point(331, 184);
             label3.Name = "label3";
             label3.Size = new Size(93, 25);
             label3.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(143, 233);
+            label4.Location = new Point(331, 238);
             label4.Name = "label4";
             label4.Size = new Size(56, 25);
             label4.TabIndex = 3;
@@ -80,14 +80,14 @@
             // 
             // txtBox_Privileges
             // 
-            txtBox_Privileges.Location = new Point(253, 192);
+            txtBox_Privileges.Location = new Point(465, 189);
             txtBox_Privileges.Name = "txtBox_Privileges";
             txtBox_Privileges.Size = new Size(244, 23);
             txtBox_Privileges.TabIndex = 4;
             // 
             // txtBox_Role
             // 
-            txtBox_Role.Location = new Point(253, 134);
+            txtBox_Role.Location = new Point(465, 134);
             txtBox_Role.Name = "txtBox_Role";
             txtBox_Role.Size = new Size(244, 23);
             txtBox_Role.TabIndex = 5;
@@ -95,7 +95,7 @@
             // 
             // txtBox_Table
             // 
-            txtBox_Table.Location = new Point(253, 233);
+            txtBox_Table.Location = new Point(465, 238);
             txtBox_Table.Name = "txtBox_Table";
             txtBox_Table.Size = new Size(244, 23);
             txtBox_Table.TabIndex = 6;
@@ -103,9 +103,9 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(331, 319);
+            button1.Location = new Point(551, 322);
             button1.Name = "button1";
-            button1.Size = new Size(75, 36);
+            button1.Size = new Size(89, 36);
             button1.TabIndex = 7;
             button1.Text = "Revoke";
             button1.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1176, 471);
             Controls.Add(button1);
             Controls.Add(txtBox_Table);
             Controls.Add(txtBox_Role);

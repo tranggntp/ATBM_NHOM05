@@ -42,5 +42,5 @@ namespace PhanHe1
             Run_SP_RevokePrivilegesFromRole();
         }
     }
-    
+
 }

@@ -28,101 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.DeleteUser = new System.Windows.Forms.Button();
-            this.Username = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            button1 = new Button();
+            panel1 = new Panel();
+            checkBox1 = new CheckBox();
+            DeleteUser = new Button();
+            Username = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(694, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Trở về";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(1049, 415);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(82, 22);
+            button1.TabIndex = 3;
+            button1.Text = "Trở về";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.DeleteUser);
-            this.panel1.Controls.Add(this.Username);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(32, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(727, 372);
-            this.panel1.TabIndex = 2;
-            // 
-            // DeleteUser
-            // 
-            this.DeleteUser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DeleteUser.Location = new System.Drawing.Point(308, 278);
-            this.DeleteUser.Name = "DeleteUser";
-            this.DeleteUser.Size = new System.Drawing.Size(105, 39);
-            this.DeleteUser.TabIndex = 5;
-            this.DeleteUser.Text = "Xóa";
-            this.DeleteUser.UseVisualStyleBackColor = true;
-            this.DeleteUser.Click += new System.EventHandler(this.DeleteUser_Click);
-            // 
-            // Username
-            // 
-            this.Username.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Username.Location = new System.Drawing.Point(288, 166);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(316, 39);
-            this.Username.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(111, 173);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 32);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Username";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(268, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 54);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "XÓA USER";
+            panel1.Controls.Add(checkBox1);
+            panel1.Controls.Add(DeleteUser);
+            panel1.Controls.Add(Username);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(28, 21);
+            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1103, 279);
+            panel1.TabIndex = 2;
             // 
             // checkBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(308, 238);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(96, 24);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "CASCADE";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(501, 163);
+            checkBox1.Margin = new Padding(3, 2, 3, 2);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(78, 19);
+            checkBox1.TabIndex = 6;
+            checkBox1.Text = "CASCADE";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // DeleteUser
+            // 
+            DeleteUser.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            DeleteUser.Location = new Point(501, 211);
+            DeleteUser.Margin = new Padding(3, 2, 3, 2);
+            DeleteUser.Name = "DeleteUser";
+            DeleteUser.Size = new Size(92, 29);
+            DeleteUser.TabIndex = 5;
+            DeleteUser.Text = "Xóa";
+            DeleteUser.UseVisualStyleBackColor = true;
+            DeleteUser.Click += DeleteUser_Click;
+            // 
+            // Username
+            // 
+            Username.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            Username.Location = new Point(415, 108);
+            Username.Margin = new Padding(3, 2, 3, 2);
+            Username.Name = "Username";
+            Username.Size = new Size(277, 32);
+            Username.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(251, 115);
+            label2.Name = "label2";
+            label2.Size = new Size(97, 25);
+            label2.TabIndex = 1;
+            label2.Text = "Username";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(467, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(166, 45);
+            label1.TabIndex = 0;
+            label1.Text = "XÓA USER";
             // 
             // XoaUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
-            this.Name = "XoaUser";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "XoaUser";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1176, 471);
+            Controls.Add(button1);
+            Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "XoaUser";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "XoaUser";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

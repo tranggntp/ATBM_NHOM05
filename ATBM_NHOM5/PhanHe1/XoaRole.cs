@@ -42,7 +42,7 @@ namespace PhanHe1
             Functions.RunSQL(sql);
             R_name = Rolename.Text.Trim().ToString();
             sql = "DROP ROLE " + R_name;
-            
+
             if (Functions.RunSQLwithResult(sql) == 1)
             {
                 MessageBox.Show("Đã xóa Role!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

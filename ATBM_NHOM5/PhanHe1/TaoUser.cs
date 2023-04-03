@@ -38,9 +38,9 @@ namespace PhanHe1
                 }
             }
             // kiem tra cac text box da duoc nhap du lieu hay chua
-            if (Username.Text.Trim().Length ==0|| Password.Text.Trim().Length == 0)
+            if (Username.Text.Trim().Length == 0 || Password.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Hãy nhập đầy đủ dữ liệu","Warning",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Hãy nhập đầy đủ dữ liệu", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             // lay du lieu tu text box kiem tra username co ton tai hay khong
