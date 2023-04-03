@@ -49,6 +49,7 @@
             Grant.TabIndex = 12;
             Grant.Text = "Grant";
             Grant.UseVisualStyleBackColor = true;
+            Grant.Click += Grant_Click;
             // 
             // Username
             // 
