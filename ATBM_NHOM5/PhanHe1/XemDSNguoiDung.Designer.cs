@@ -37,7 +37,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(103, 20);
+            label1.Location = new Point(287, 9);
             label1.Name = "label1";
             label1.Size = new Size(601, 45);
             label1.TabIndex = 0;
@@ -47,11 +47,11 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.ControlLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(38, 74);
+            dataGridView1.Location = new Point(2, 57);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(770, 260);
+            dataGridView1.Size = new Size(1173, 413);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -59,7 +59,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(836, 365);
+            ClientSize = new Size(1176, 471);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             Name = "XemDsNguoiDung";

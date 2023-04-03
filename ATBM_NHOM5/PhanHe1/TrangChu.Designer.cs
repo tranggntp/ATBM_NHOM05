@@ -45,8 +45,8 @@
             // danhsachUser
             // 
             danhsachUser.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            danhsachUser.Location = new Point(7, 2);
-            danhsachUser.Margin = new Padding(2, 2, 2, 2);
+            danhsachUser.Location = new Point(58, 13);
+            danhsachUser.Margin = new Padding(2);
             danhsachUser.Name = "danhsachUser";
             danhsachUser.Size = new Size(130, 60);
             danhsachUser.TabIndex = 0;
@@ -57,28 +57,28 @@
             // PanelMenu
             // 
             PanelMenu.BackColor = Color.Transparent;
+            PanelMenu.Controls.Add(ChinhSuaQuyen);
             PanelMenu.Controls.Add(CapQuyen);
             PanelMenu.Controls.Add(panelChildForm);
             PanelMenu.Controls.Add(XemDanhSachRole);
             PanelMenu.Controls.Add(QuanLyUser_Role);
             PanelMenu.Controls.Add(dangxuat);
             PanelMenu.Controls.Add(ThuHoiQuyen);
-            PanelMenu.Controls.Add(ChinhSuaQuyen);
             PanelMenu.Controls.Add(UserXemQuyen);
             PanelMenu.Controls.Add(danhsachUser);
             PanelMenu.Location = new Point(-4, -2);
             PanelMenu.Margin = new Padding(3, 2, 3, 2);
             PanelMenu.Name = "PanelMenu";
-            PanelMenu.Size = new Size(872, 120);
+            PanelMenu.Size = new Size(1198, 120);
             PanelMenu.TabIndex = 1;
             // 
             // CapQuyen
             // 
             CapQuyen.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            CapQuyen.Location = new Point(555, 3);
-            CapQuyen.Margin = new Padding(2, 2, 2, 2);
+            CapQuyen.Location = new Point(594, 13);
+            CapQuyen.Margin = new Padding(2);
             CapQuyen.Name = "CapQuyen";
-            CapQuyen.Size = new Size(158, 62);
+            CapQuyen.Size = new Size(130, 60);
             CapQuyen.TabIndex = 12;
             CapQuyen.Text = "Cấp Quyền";
             CapQuyen.UseVisualStyleBackColor = true;
@@ -95,10 +95,10 @@
             // XemDanhSachRole
             // 
             XemDanhSachRole.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            XemDanhSachRole.Location = new Point(136, 0);
-            XemDanhSachRole.Margin = new Padding(2, 2, 2, 2);
+            XemDanhSachRole.Location = new Point(192, 13);
+            XemDanhSachRole.Margin = new Padding(2);
             XemDanhSachRole.Name = "XemDanhSachRole";
-            XemDanhSachRole.Size = new Size(136, 62);
+            XemDanhSachRole.Size = new Size(130, 60);
             XemDanhSachRole.TabIndex = 11;
             XemDanhSachRole.Text = "Xem Danh Sách Role";
             XemDanhSachRole.UseVisualStyleBackColor = true;
@@ -107,10 +107,10 @@
             // QuanLyUser_Role
             // 
             QuanLyUser_Role.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            QuanLyUser_Role.Location = new Point(272, 1);
-            QuanLyUser_Role.Margin = new Padding(2, 2, 2, 2);
+            QuanLyUser_Role.Location = new Point(326, 13);
+            QuanLyUser_Role.Margin = new Padding(2);
             QuanLyUser_Role.Name = "QuanLyUser_Role";
-            QuanLyUser_Role.Size = new Size(127, 62);
+            QuanLyUser_Role.Size = new Size(130, 60);
             QuanLyUser_Role.TabIndex = 10;
             QuanLyUser_Role.Text = "Quản Lý User/ Role";
             QuanLyUser_Role.UseVisualStyleBackColor = true;
@@ -119,8 +119,8 @@
             // dangxuat
             // 
             dangxuat.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            dangxuat.Location = new Point(771, 74);
-            dangxuat.Margin = new Padding(2, 2, 2, 2);
+            dangxuat.Location = new Point(1040, 31);
+            dangxuat.Margin = new Padding(2);
             dangxuat.Name = "dangxuat";
             dangxuat.Size = new Size(92, 26);
             dangxuat.TabIndex = 9;
@@ -131,34 +131,34 @@
             // ThuHoiQuyen
             // 
             ThuHoiQuyen.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            ThuHoiQuyen.Location = new Point(708, 2);
-            ThuHoiQuyen.Margin = new Padding(2, 2, 2, 2);
+            ThuHoiQuyen.Location = new Point(728, 13);
+            ThuHoiQuyen.Margin = new Padding(2);
             ThuHoiQuyen.Name = "ThuHoiQuyen";
-            ThuHoiQuyen.Size = new Size(158, 62);
+            ThuHoiQuyen.Size = new Size(130, 60);
             ThuHoiQuyen.TabIndex = 8;
-            ThuHoiQuyen.Text = "Thu Hồi Quyền";
+            ThuHoiQuyen.Text = "Thu Hồi Quyền Trên User";
             ThuHoiQuyen.UseVisualStyleBackColor = true;
             ThuHoiQuyen.Click += ThuHoiQuyen_Click;
             // 
             // ChinhSuaQuyen
             // 
             ChinhSuaQuyen.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            ChinhSuaQuyen.Location = new Point(88, 65);
-            ChinhSuaQuyen.Margin = new Padding(2, 2, 2, 2);
+            ChinhSuaQuyen.Location = new Point(862, 13);
+            ChinhSuaQuyen.Margin = new Padding(2);
             ChinhSuaQuyen.Name = "ChinhSuaQuyen";
-            ChinhSuaQuyen.Size = new Size(158, 51);
+            ChinhSuaQuyen.Size = new Size(130, 60);
             ChinhSuaQuyen.TabIndex = 4;
-            ChinhSuaQuyen.Text = "Chỉnh Sửa Quyền";
+            ChinhSuaQuyen.Text = "Thu Hồi Quyền Trên Role";
             ChinhSuaQuyen.UseVisualStyleBackColor = true;
             ChinhSuaQuyen.Click += ChinhSuaQuyen_Click;
             // 
             // UserXemQuyen
             // 
             UserXemQuyen.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            UserXemQuyen.Location = new Point(397, 2);
-            UserXemQuyen.Margin = new Padding(2, 2, 2, 2);
+            UserXemQuyen.Location = new Point(460, 13);
+            UserXemQuyen.Margin = new Padding(2);
             UserXemQuyen.Name = "UserXemQuyen";
-            UserXemQuyen.Size = new Size(158, 62);
+            UserXemQuyen.Size = new Size(130, 60);
             UserXemQuyen.TabIndex = 1;
             UserXemQuyen.Text = "Xem Quyền của User/ Role";
             UserXemQuyen.UseVisualStyleBackColor = true;
@@ -167,19 +167,19 @@
             // panel1
             // 
             panel1.Location = new Point(2, 119);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1219, 501);
+            panel1.Size = new Size(1192, 510);
             panel1.TabIndex = 2;
             // 
             // TrangChu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1232, 631);
+            ClientSize = new Size(1197, 631);
             Controls.Add(panel1);
             Controls.Add(PanelMenu);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "TrangChu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TrangChu";

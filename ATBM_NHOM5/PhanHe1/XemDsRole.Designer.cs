@@ -28,48 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            dataGridView1 = new DataGridView();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 132);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1100, 433);
-            this.dataGridView1.TabIndex = 3;
+            dataGridView1.BackgroundColor = SystemColors.ControlLight;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(1, 57);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(1174, 413);
+            dataGridView1.TabIndex = 3;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(235, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(725, 65);
-            this.label1.TabIndex = 2;
-            this.label1.Text = " Danh Sách Role Trong Hệ Thống";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(345, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(488, 45);
+            label1.TabIndex = 2;
+            label1.Text = " Danh Sách Role Trong Hệ Thống";
             // 
             // XemDsRole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1194, 608);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
-            this.Name = "XemDsRole";
-            this.Text = "XemDsRole";
-            this.Load += new System.EventHandler(this.XemDsRole_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1176, 471);
+            Controls.Add(dataGridView1);
+            Controls.Add(label1);
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "XemDsRole";
+            Text = "XemDsRole";
+            Load += XemDsRole_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
