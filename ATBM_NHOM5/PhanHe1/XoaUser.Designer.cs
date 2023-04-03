@@ -34,6 +34,7 @@
             this.Username = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,9 +46,11 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Trở về";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.DeleteUser);
             this.panel1.Controls.Add(this.Username);
             this.panel1.Controls.Add(this.label2);
@@ -60,12 +63,13 @@
             // DeleteUser
             // 
             this.DeleteUser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DeleteUser.Location = new System.Drawing.Point(297, 246);
+            this.DeleteUser.Location = new System.Drawing.Point(308, 278);
             this.DeleteUser.Name = "DeleteUser";
             this.DeleteUser.Size = new System.Drawing.Size(105, 39);
             this.DeleteUser.TabIndex = 5;
             this.DeleteUser.Text = "Xóa";
             this.DeleteUser.UseVisualStyleBackColor = true;
+            this.DeleteUser.Click += new System.EventHandler(this.DeleteUser_Click);
             // 
             // Username
             // 
@@ -79,7 +83,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(114, 173);
+            this.label2.Location = new System.Drawing.Point(111, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 32);
             this.label2.TabIndex = 1;
@@ -95,6 +99,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "XÓA USER";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(308, 238);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(96, 24);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "CASCADE";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // XoaUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -103,6 +117,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "XoaUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XoaUser";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -118,5 +133,6 @@
         private TextBox Username;
         private Label label2;
         private Label label1;
+        private CheckBox checkBox1;
     }
 }

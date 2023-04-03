@@ -71,6 +71,7 @@ namespace PhanHe1
         {
             Application.Run(new DangNhap());
         }
+
         private void dangxuat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -108,7 +109,7 @@ namespace PhanHe1
 
         private void PQHthong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new PhanQuyenHeThong());
+            OpenChildForm(new CapQuyen());
             ActivateButton(sender);
         }
 
@@ -118,6 +119,11 @@ namespace PhanHe1
         }
 
         private void RoleThuHoiQuyen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
         {
 
         }
