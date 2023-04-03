@@ -56,5 +56,47 @@ namespace PhanHe1
                 MessageBox.Show("Đóng kết nối với DB");
             }
         }
+        public static void RunSQL(string sql) // chạy câu lệnh sql
+        {
+            OracleCommand cmd = new OracleCommand();
+
+            //Gán kết nối
+            cmd.Connection = Con;
+
+            //Gán lệnh SQL
+            cmd.CommandText = sql;
+
+            //Thực hiện câu lệnh SQL
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            //Giải phóng bộ nhớ
+            cmd.Dispose();
+            cmd = null;
+        }
+
+
+
+        public static void FillComboBox(string sql, ComboBox comboBox)
+        {
+            OracleCommand command = new OracleCommand();
+            command.CommandText = sql;
+            command.Connection = Con;
+
+            OracleDataAdapter adapter = new OracleDataAdapter(command);
+            //DataTable dataTable = new DataTable(); //create a new table
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "all_tables");
+
+            //comboBox.ValueMember = macot;
+            comboBox.DisplayMember = "table_name";
+            comboBox.DataSource = ds.Tables["all_tables"];
+        }
     }
 }

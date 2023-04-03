@@ -114,12 +114,14 @@ namespace PhanHe1
 
         private void UserThuHoiQuyen_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new ThuHoiQuyenUser());
+            ActivateButton(sender);
         }
 
         private void RoleThuHoiQuyen_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new ThuHoiQuyenRole());
+            ActivateButton(sender);
         }
     }
 }

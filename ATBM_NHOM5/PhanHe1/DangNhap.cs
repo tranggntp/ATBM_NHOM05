@@ -20,6 +20,11 @@ namespace PhanHe1
             InitializeComponent();
         }
 
+        public void MoFormRevokeUser()
+        {
+            Application.Run(new ThuHoiQuyenUser());
+        }
+
         public void MoFormAdmin()
         {
             Application.Run(new TrangChu(username, password));
