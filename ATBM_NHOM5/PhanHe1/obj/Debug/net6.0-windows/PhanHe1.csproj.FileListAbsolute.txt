@@ -36,7 +36,6 @@ D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\Or
 D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.csproj.AssemblyReference.cache
 D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.PhanQuyenHeThong.resources
 D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.QuanLiUser_Role.resources
-D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.SuaRole.resources
 D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.SuaUser.resources
 D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.TaoUser.resources
 D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.ThemRole.resources
@@ -120,3 +119,9 @@ C:\Users\trang\Desktop\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\P
 C:\Users\trang\Desktop\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.genruntimeconfig.cache
 C:\Users\trang\Desktop\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\ref\PhanHe1.dll
 C:\Users\trang\Desktop\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.DangNhap.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\runtimes\linux\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\runtimes\osx\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.Protocols.dll
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.DangNhap.resources
+D:\AT&BM HTTT\project\ATBM_NHOM05\ATBM_NHOM5\PhanHe1\obj\Debug\net6.0-windows\PhanHe1.CapQuyen.resources

@@ -45,9 +45,10 @@
             // 
             // danhsachUser
             // 
-            this.danhsachUser.Location = new System.Drawing.Point(19, 16);
+            this.danhsachUser.Location = new System.Drawing.Point(15, 13);
+            this.danhsachUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.danhsachUser.Name = "danhsachUser";
-            this.danhsachUser.Size = new System.Drawing.Size(161, 71);
+            this.danhsachUser.Size = new System.Drawing.Size(129, 57);
             this.danhsachUser.TabIndex = 0;
             this.danhsachUser.Text = "danh sach User";
             this.danhsachUser.UseVisualStyleBackColor = true;
@@ -66,18 +67,18 @@
             this.PanelMenu.Controls.Add(this.RoleXemQuyen);
             this.PanelMenu.Controls.Add(this.UserXemQuyen);
             this.PanelMenu.Controls.Add(this.danhsachUser);
-            this.PanelMenu.Location = new System.Drawing.Point(-6, -3);
-            this.PanelMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.PanelMenu.Location = new System.Drawing.Point(-5, -2);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(1245, 200);
+            this.PanelMenu.Size = new System.Drawing.Size(996, 160);
             this.PanelMenu.TabIndex = 1;
             // 
             // dangxuat
             // 
             this.dangxuat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.dangxuat.Location = new System.Drawing.Point(1040, 142);
+            this.dangxuat.Location = new System.Drawing.Point(832, 114);
+            this.dangxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dangxuat.Name = "dangxuat";
-            this.dangxuat.Size = new System.Drawing.Size(154, 51);
+            this.dangxuat.Size = new System.Drawing.Size(123, 41);
             this.dangxuat.TabIndex = 9;
             this.dangxuat.Text = "dangxuat";
             this.dangxuat.UseVisualStyleBackColor = true;
@@ -85,9 +86,10 @@
             // 
             // RoleThuHoiQuyen
             // 
-            this.RoleThuHoiQuyen.Location = new System.Drawing.Point(643, 111);
+            this.RoleThuHoiQuyen.Location = new System.Drawing.Point(514, 89);
+            this.RoleThuHoiQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RoleThuHoiQuyen.Name = "RoleThuHoiQuyen";
-            this.RoleThuHoiQuyen.Size = new System.Drawing.Size(189, 71);
+            this.RoleThuHoiQuyen.Size = new System.Drawing.Size(151, 57);
             this.RoleThuHoiQuyen.TabIndex = 8;
             this.RoleThuHoiQuyen.Text = "RoleThuHoiQuyen";
             this.RoleThuHoiQuyen.UseVisualStyleBackColor = true;
@@ -95,9 +97,10 @@
             // 
             // UserThuHoiQuyen
             // 
-            this.UserThuHoiQuyen.Location = new System.Drawing.Point(432, 111);
+            this.UserThuHoiQuyen.Location = new System.Drawing.Point(346, 89);
+            this.UserThuHoiQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UserThuHoiQuyen.Name = "UserThuHoiQuyen";
-            this.UserThuHoiQuyen.Size = new System.Drawing.Size(172, 71);
+            this.UserThuHoiQuyen.Size = new System.Drawing.Size(138, 57);
             this.UserThuHoiQuyen.TabIndex = 7;
             this.UserThuHoiQuyen.Text = "UserThuHoiQuyen";
             this.UserThuHoiQuyen.UseVisualStyleBackColor = true;
@@ -105,9 +108,10 @@
             // 
             // PQHthong
             // 
-            this.PQHthong.Location = new System.Drawing.Point(243, 111);
+            this.PQHthong.Location = new System.Drawing.Point(194, 89);
+            this.PQHthong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PQHthong.Name = "PQHthong";
-            this.PQHthong.Size = new System.Drawing.Size(156, 71);
+            this.PQHthong.Size = new System.Drawing.Size(125, 57);
             this.PQHthong.TabIndex = 6;
             this.PQHthong.Text = "PQHthong";
             this.PQHthong.UseVisualStyleBackColor = true;
@@ -115,9 +119,10 @@
             // 
             // PQUsertoRole
             // 
-            this.PQUsertoRole.Location = new System.Drawing.Point(37, 111);
+            this.PQUsertoRole.Location = new System.Drawing.Point(30, 89);
+            this.PQUsertoRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PQUsertoRole.Name = "PQUsertoRole";
-            this.PQUsertoRole.Size = new System.Drawing.Size(156, 71);
+            this.PQUsertoRole.Size = new System.Drawing.Size(125, 57);
             this.PQUsertoRole.TabIndex = 5;
             this.PQUsertoRole.Text = "PQUsertoRole";
             this.PQUsertoRole.UseVisualStyleBackColor = true;
@@ -125,9 +130,10 @@
             // 
             // PQQTTable
             // 
-            this.PQQTTable.Location = new System.Drawing.Point(816, 16);
+            this.PQQTTable.Location = new System.Drawing.Point(653, 13);
+            this.PQQTTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PQQTTable.Name = "PQQTTable";
-            this.PQQTTable.Size = new System.Drawing.Size(156, 71);
+            this.PQQTTable.Size = new System.Drawing.Size(125, 57);
             this.PQQTTable.TabIndex = 4;
             this.PQQTTable.Text = "PQQTTable";
             this.PQQTTable.UseVisualStyleBackColor = true;
@@ -135,9 +141,10 @@
             // 
             // QuanLyUserRole
             // 
-            this.QuanLyUserRole.Location = new System.Drawing.Point(609, 16);
+            this.QuanLyUserRole.Location = new System.Drawing.Point(487, 13);
+            this.QuanLyUserRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.QuanLyUserRole.Name = "QuanLyUserRole";
-            this.QuanLyUserRole.Size = new System.Drawing.Size(156, 71);
+            this.QuanLyUserRole.Size = new System.Drawing.Size(125, 57);
             this.QuanLyUserRole.TabIndex = 3;
             this.QuanLyUserRole.Text = "QuanLyUserRole";
             this.QuanLyUserRole.UseVisualStyleBackColor = true;
@@ -145,9 +152,10 @@
             // 
             // RoleXemQuyen
             // 
-            this.RoleXemQuyen.Location = new System.Drawing.Point(402, 16);
+            this.RoleXemQuyen.Location = new System.Drawing.Point(322, 13);
+            this.RoleXemQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RoleXemQuyen.Name = "RoleXemQuyen";
-            this.RoleXemQuyen.Size = new System.Drawing.Size(156, 71);
+            this.RoleXemQuyen.Size = new System.Drawing.Size(125, 57);
             this.RoleXemQuyen.TabIndex = 2;
             this.RoleXemQuyen.Text = "RoleXemQuyen";
             this.RoleXemQuyen.UseVisualStyleBackColor = true;
@@ -155,9 +163,10 @@
             // 
             // UserXemQuyen
             // 
-            this.UserXemQuyen.Location = new System.Drawing.Point(209, 16);
+            this.UserXemQuyen.Location = new System.Drawing.Point(167, 13);
+            this.UserXemQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UserXemQuyen.Name = "UserXemQuyen";
-            this.UserXemQuyen.Size = new System.Drawing.Size(156, 71);
+            this.UserXemQuyen.Size = new System.Drawing.Size(125, 57);
             this.UserXemQuyen.TabIndex = 1;
             this.UserXemQuyen.Text = "UserXemQuyen";
             this.UserXemQuyen.UseVisualStyleBackColor = true;
@@ -165,19 +174,20 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Location = new System.Drawing.Point(13, 197);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4);
+            this.panelChildForm.Location = new System.Drawing.Point(10, 158);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1200, 600);
+            this.panelChildForm.Size = new System.Drawing.Size(960, 480);
             this.panelChildForm.TabIndex = 2;
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
             // TrangChu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1238, 810);
+            this.ClientSize = new System.Drawing.Size(990, 648);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.PanelMenu);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangChu";

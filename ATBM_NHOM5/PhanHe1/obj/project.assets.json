@@ -746,24 +746,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\trang\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\trang\\Desktop\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
+      "projectUniqueName": "D:\\AT&BM HTTT\\project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
       "projectName": "PhanHe1",
-      "projectPath": "C:\\Users\\trang\\Desktop\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
-      "packagesPath": "C:\\Users\\trang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\trang\\Desktop\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\obj\\",
+      "projectPath": "D:\\AT&BM HTTT\\project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\PhanHe1.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "D:\\AT&BM HTTT\\project\\ATBM_NHOM05\\ATBM_NHOM5\\PhanHe1\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\trang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -813,7 +808,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
