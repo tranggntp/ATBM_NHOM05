@@ -1,6 +1,6 @@
 ﻿namespace PhanHe1
 {
-    partial class XemQuyenUser
+    partial class XemQuyen
     {
         /// <summary>
         /// Required designer variable.
@@ -38,19 +38,21 @@
             // 
             // View
             // 
-            this.View.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.View.Location = new System.Drawing.Point(838, 107);
+            this.View.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.View.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.View.Location = new System.Drawing.Point(832, 81);
             this.View.Margin = new System.Windows.Forms.Padding(4);
             this.View.Name = "View";
-            this.View.Size = new System.Drawing.Size(210, 61);
+            this.View.Size = new System.Drawing.Size(206, 65);
             this.View.TabIndex = 8;
             this.View.Text = "Xem quyền";
             this.View.UseVisualStyleBackColor = true;
+            this.View.Click += new System.EventHandler(this.View_Click);
             // 
             // Username
             // 
             this.Username.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Username.Location = new System.Drawing.Point(408, 115);
+            this.Username.Location = new System.Drawing.Point(407, 91);
             this.Username.Margin = new System.Windows.Forms.Padding(4);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(394, 45);
@@ -60,49 +62,51 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(194, 122);
+            this.label2.Location = new System.Drawing.Point(110, 94);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 38);
+            this.label2.Size = new System.Drawing.Size(269, 38);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Nhập tên User";
+            this.label2.Text = "Nhập tên User/ Role";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(62, 185);
+            this.dataGridView1.Location = new System.Drawing.Point(40, 169);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1073, 388);
+            this.dataGridView1.Size = new System.Drawing.Size(1154, 434);
             this.dataGridView1.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(372, 23);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(342, 21);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(459, 65);
+            this.label3.Size = new System.Drawing.Size(489, 54);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Xem quyền của User";
+            this.label3.Text = "Xem quyền của User/ Role";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // XemQuyenUser
+            // XemQuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 591);
+            this.ClientSize = new System.Drawing.Size(1230, 638);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.View);
             this.Controls.Add(this.Username);
             this.Controls.Add(this.label2);
-            this.Name = "XemQuyenUser";
+            this.Name = "XemQuyen";
             this.Text = "XemQuyenUser";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

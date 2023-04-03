@@ -10,23 +10,17 @@ using System.Windows.Forms;
 
 namespace PhanHe1
 {
-    public partial class XemDsNguoiDung : Form
+    public partial class XemDsRole : Form
     {
         DataTable dtTableName = new DataTable();
-
-        public XemDsNguoiDung()
+        public XemDsRole()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void LoadData_ListRoles()
         {
-
-        }
-
-        private void LoadData_ListUsers()
-        {
-            string sql = "SELECT USERNAME, USER_ID, ACCOUNT_STATUS, CREATED  FROM dba_users ORDER BY CREATED DESC";
+            string sql = "SELECT ROLE, ROLE_ID, PASSWORD_REQUIRED, AUTHENTICATION_TYPE FROM DBA_ROLES ORDER BY ROLE_ID DESC";
             dtTableName = Functions.GetDataToTable(sql);
             dataGridView1.DataSource = dtTableName;
             // set Font cho tên cột
@@ -34,29 +28,28 @@ namespace PhanHe1
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = SystemColors.InactiveCaption;
 
-            dataGridView1.Columns[0].HeaderText = "USERNAME";
-            dataGridView1.Columns[1].HeaderText = "USER_ID";
-            dataGridView1.Columns[2].HeaderText = "ACCOUNT_STATUS";
-            dataGridView1.Columns[3].HeaderText = "CREATED";
+            dataGridView1.Columns[0].HeaderText = "ROLE";
+            dataGridView1.Columns[1].HeaderText = "ROLE_ID";
+            dataGridView1.Columns[2].HeaderText = "PASSWORD_REQUIRED";
+            dataGridView1.Columns[3].HeaderText = "AUTHENTICATION_TYPE";
 
             // set Font cho dữ liệu hiển thị trong cột
             dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 12);
 
             // set kích thước cột
-            dataGridView1.Columns[0].Width = 300;
-            dataGridView1.Columns[1].Width = 200;
-            dataGridView1.Columns[2].Width = 250;
-            dataGridView1.Columns[3].Width = 250;
+            dataGridView1.Columns[0].Width = 250;
+            dataGridView1.Columns[1].Width = 150;
+            dataGridView1.Columns[2].Width = 300;
+            dataGridView1.Columns[3].Width = 300;
 
             //Không cho người dùng thêm dữ liệu trực tiếp
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
 
-        
-        private void XemDsNguoiDung_Load(object sender, EventArgs e)
+        private void XemDsRole_Load(object sender, EventArgs e)
         {
-            LoadData_ListUsers();
+            LoadData_ListRoles();
         }
     }
 }

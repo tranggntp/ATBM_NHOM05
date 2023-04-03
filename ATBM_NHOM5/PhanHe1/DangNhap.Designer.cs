@@ -42,6 +42,7 @@
             this.Password.Location = new System.Drawing.Point(282, 259);
             this.Password.Margin = new System.Windows.Forms.Padding(4);
             this.Password.Name = "Password";
+            this.Password.PasswordChar = '•';
             this.Password.Size = new System.Drawing.Size(394, 45);
             this.Password.TabIndex = 13;
             // 
@@ -58,14 +59,15 @@
             // 
             // btn_DangNhap
             // 
-            this.btn_DangNhap.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_DangNhap.Location = new System.Drawing.Point(301, 377);
+            this.btn_DangNhap.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btn_DangNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn_DangNhap.Location = new System.Drawing.Point(322, 350);
             this.btn_DangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DangNhap.Name = "btn_DangNhap";
-            this.btn_DangNhap.Size = new System.Drawing.Size(213, 49);
+            this.btn_DangNhap.Size = new System.Drawing.Size(213, 89);
             this.btn_DangNhap.TabIndex = 11;
             this.btn_DangNhap.Text = "Đăng Nhập";
-            this.btn_DangNhap.UseVisualStyleBackColor = true;
+            this.btn_DangNhap.UseVisualStyleBackColor = false;
             this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
             // Username

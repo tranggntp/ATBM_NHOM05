@@ -1,6 +1,6 @@
 ﻿namespace PhanHe1
 {
-    partial class XemDsNguoiDung
+    partial class XemDsRole
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(147, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(894, 65);
-            this.label1.TabIndex = 0;
-            this.label1.Text = " Danh Sách Người Dùng Trong Hệ Thống";
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 123);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 132);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(1100, 433);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.TabIndex = 3;
             // 
-            // XemDsNguoiDung
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(235, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(725, 65);
+            this.label1.TabIndex = 2;
+            this.label1.Text = " Danh Sách Role Trong Hệ Thống";
+            // 
+            // XemDsRole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 608);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "XemDsNguoiDung";
-            this.Text = "XemDsNguoiDung";
-            this.Load += new System.EventHandler(this.XemDsNguoiDung_Load);
+            this.Name = "XemDsRole";
+            this.Text = "XemDsRole";
+            this.Load += new System.EventHandler(this.XemDsRole_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -75,7 +74,7 @@
 
         #endregion
 
-        private Label label1;
         private DataGridView dataGridView1;
+        private Label label1;
     }
 }
