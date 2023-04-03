@@ -13,9 +13,6 @@
     <Compile Update="QuanLiUser_Role.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SuaRole.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="SuaUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -23,9 +20,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ThemRole.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ThuHoiQuyenRole.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ThuHoiQuyenUser.cs">
@@ -37,7 +31,10 @@
     <Compile Update="XemDsNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="XemQuyenUser.cs">
+    <Compile Update="XemDsRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XemQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="XoaRole.cs">
