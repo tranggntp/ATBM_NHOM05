@@ -30,8 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DeleteUser = new System.Windows.Forms.Button();
-            this.Username = new System.Windows.Forms.TextBox();
+            this.DeleteRole = new System.Windows.Forms.Button();
+            this.Rolename = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -45,11 +45,12 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Trở về";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.DeleteUser);
-            this.panel1.Controls.Add(this.Username);
+            this.panel1.Controls.Add(this.DeleteRole);
+            this.panel1.Controls.Add(this.Rolename);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(35, 28);
@@ -57,23 +58,24 @@
             this.panel1.Size = new System.Drawing.Size(727, 372);
             this.panel1.TabIndex = 4;
             // 
-            // DeleteUser
+            // DeleteRole
             // 
-            this.DeleteUser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DeleteUser.Location = new System.Drawing.Point(297, 246);
-            this.DeleteUser.Name = "DeleteUser";
-            this.DeleteUser.Size = new System.Drawing.Size(105, 39);
-            this.DeleteUser.TabIndex = 5;
-            this.DeleteUser.Text = "Xóa";
-            this.DeleteUser.UseVisualStyleBackColor = true;
+            this.DeleteRole.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DeleteRole.Location = new System.Drawing.Point(319, 255);
+            this.DeleteRole.Name = "DeleteRole";
+            this.DeleteRole.Size = new System.Drawing.Size(105, 39);
+            this.DeleteRole.TabIndex = 5;
+            this.DeleteRole.Text = "Xóa";
+            this.DeleteRole.UseVisualStyleBackColor = true;
+            this.DeleteRole.Click += new System.EventHandler(this.DeleteUser_Click);
             // 
-            // Username
+            // Rolename
             // 
-            this.Username.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Username.Location = new System.Drawing.Point(288, 166);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(316, 39);
-            this.Username.TabIndex = 2;
+            this.Rolename.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Rolename.Location = new System.Drawing.Point(288, 166);
+            this.Rolename.Name = "Rolename";
+            this.Rolename.Size = new System.Drawing.Size(316, 39);
+            this.Rolename.TabIndex = 2;
             // 
             // label2
             // 
@@ -103,6 +105,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "XoaRole";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XoaRole";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -114,8 +117,8 @@
 
         private Button button1;
         private Panel panel1;
-        private Button DeleteUser;
-        private TextBox Username;
+        private Button DeleteRole;
+        private TextBox Rolename;
         private Label label2;
         private Label label1;
     }

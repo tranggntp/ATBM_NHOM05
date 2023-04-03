@@ -27,21 +27,21 @@ namespace PhanHe1
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
+            panel1.Controls.Add(childForm);
+            panel1.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
         // xử lí chuyển màu khi click vào button
-        private Button currentButton;
+        private Button now_btn;
         private void DisableButton()
         {
-            foreach (Control previousBtn in PanelMenu.Controls)
+            foreach (Control prv_btn in PanelMenu.Controls)
             {
-                if (previousBtn.GetType() == typeof(Button))
+                if (prv_btn.GetType() == typeof(Button))
                 {
-                    previousBtn.BackColor = Color.FromArgb(39, 39, 58);
-                    previousBtn.ForeColor = Color.Gainsboro;
+                    prv_btn.BackColor = Color.FromArgb(153, 180, 209);
+                    prv_btn.ForeColor = Color.FromArgb(185, 203, 223);
                 }
             }
         }
@@ -49,24 +49,20 @@ namespace PhanHe1
         {
             if (btnSender != null)
             {
-                if (currentButton != (Button)btnSender)
+                if (now_btn != (Button)btnSender)
                 {
                     DisableButton();
-                    Color color = ColorTranslator.FromHtml("#3f75a2");
-                    currentButton = (Button)btnSender;
-                    currentButton.BackColor = color;
-                    currentButton.ForeColor = Color.White;
+                    Color color = Color.FromArgb(0, 43, 91);
+                    now_btn = (Button)btnSender;
+                    now_btn.BackColor = color;
+                    now_btn.ForeColor = Color.White;
+              
                 }
             }
         }
 
 
         //xem danh sách user
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void DangNhapLai()
         {
             Application.Run(new DangNhap());
@@ -79,47 +75,71 @@ namespace PhanHe1
             t.Start();
         }
 
-        private void RoleXemQuyen_Click(object sender, EventArgs e)
+        private void danhsachUser_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void UserXemQuyen_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new XemQuyenUser());
+            OpenChildForm(new XemDsNguoiDung());
             ActivateButton(sender);
         }
 
-        private void QuanLyUserRole_Click(object sender, EventArgs e)
+        private void XemDanhSachRole_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new XemDsRole());
+            ActivateButton(sender);
+        }
+
+        private void QuanLyUser_Role_Click(object sender, EventArgs e)
         {
             OpenChildForm(new QuanLiUser_Role());
             ActivateButton(sender);
         }
+        //UserXemQuyen_Click
 
-        private void PQQTTable_Click(object sender, EventArgs e)
+        //private void danhsachUser_Click(object sender, EventArgs e)
+        //{
+        //    OpenChildForm(new XemDsNguoiDung());
+        //    ActivateButton(sender);
+        //}
+
+        private void UserXemQuyen_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void PQUsertoRole_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PQHthong_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new PhanQuyenHeThong());
+            OpenChildForm(new XemQuyen());
             ActivateButton(sender);
         }
 
-        private void UserThuHoiQuyen_Click(object sender, EventArgs e)
+        private void CapQuyen_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new TaoUser());
+            ActivateButton(sender);
         }
 
-        private void RoleThuHoiQuyen_Click(object sender, EventArgs e)
+        private void ThuHoiQuyen_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new TaoUser());
+            ActivateButton(sender);
         }
+
+        private void ChinhSuaQuyen_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TaoUser());
+            ActivateButton(sender);
+        }
+
+        //private void XemDanhSachRole_Click(object sender, EventArgs e)
+        //{
+        //    OpenChildForm(new XemDsRole());
+        //    ActivateButton(sender);
+        //}
+
+        //private void QuanLyUser_Role_Click(object sender, EventArgs e)
+        //{
+        //    OpenChildForm(new QuanLiUser_Role());
+        //    ActivateButton(sender);
+        //}
+
+        //private void CapQuyen_Click(object sender, EventArgs e)
+        //{
+        //    OpenChildForm(new TaoUser());
+        //    ActivateButton(sender);
+        //}
     }
 }

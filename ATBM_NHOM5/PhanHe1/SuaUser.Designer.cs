@@ -30,12 +30,12 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DeleteUser = new System.Windows.Forms.Button();
+            this.NewPass = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.EditUser = new System.Windows.Forms.Button();
             this.Username = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,12 +47,13 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Trở về";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.NewPass);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.DeleteUser);
+            this.panel1.Controls.Add(this.EditUser);
             this.panel1.Controls.Add(this.Username);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -61,15 +62,35 @@
             this.panel1.Size = new System.Drawing.Size(727, 372);
             this.panel1.TabIndex = 4;
             // 
-            // DeleteUser
+            // NewPass
             // 
-            this.DeleteUser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DeleteUser.Location = new System.Drawing.Point(313, 258);
-            this.DeleteUser.Name = "DeleteUser";
-            this.DeleteUser.Size = new System.Drawing.Size(105, 39);
-            this.DeleteUser.TabIndex = 5;
-            this.DeleteUser.Text = "Sửa";
-            this.DeleteUser.UseVisualStyleBackColor = true;
+            this.NewPass.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NewPass.Location = new System.Drawing.Point(288, 187);
+            this.NewPass.Name = "NewPass";
+            this.NewPass.PasswordChar = '•';
+            this.NewPass.Size = new System.Drawing.Size(316, 39);
+            this.NewPass.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(90, 194);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(159, 32);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Password mới";
+            // 
+            // EditUser
+            // 
+            this.EditUser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EditUser.Location = new System.Drawing.Point(309, 291);
+            this.EditUser.Name = "EditUser";
+            this.EditUser.Size = new System.Drawing.Size(105, 39);
+            this.EditUser.TabIndex = 5;
+            this.EditUser.Text = "Sửa";
+            this.EditUser.UseVisualStyleBackColor = true;
+            this.EditUser.Click += new System.EventHandler(this.DeleteUser_Click);
             // 
             // Username
             // 
@@ -85,9 +106,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(90, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 32);
+            this.label2.Size = new System.Drawing.Size(121, 32);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Username mới";
+            this.label2.Text = "Username";
             // 
             // label1
             // 
@@ -99,24 +120,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "SỬA USER";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(90, 194);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 32);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Password mới";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(288, 187);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 39);
-            this.textBox1.TabIndex = 7;
-            // 
             // SuaUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -125,6 +128,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "SuaUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SuaUser";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -136,11 +140,11 @@
 
         private Button button1;
         private Panel panel1;
-        private Button DeleteUser;
+        private Button EditUser;
         private TextBox Username;
         private Label label2;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox NewPass;
         private Label label3;
     }
 }

@@ -30,8 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CreateUser = new System.Windows.Forms.Button();
-            this.Username = new System.Windows.Forms.TextBox();
+            this.CreateRole = new System.Windows.Forms.Button();
+            this.RoleName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -45,11 +45,12 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Trở về";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.CreateUser);
-            this.panel1.Controls.Add(this.Username);
+            this.panel1.Controls.Add(this.CreateRole);
+            this.panel1.Controls.Add(this.RoleName);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(44, 12);
@@ -57,23 +58,24 @@
             this.panel1.Size = new System.Drawing.Size(723, 403);
             this.panel1.TabIndex = 2;
             // 
-            // CreateUser
+            // CreateRole
             // 
-            this.CreateUser.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CreateUser.Location = new System.Drawing.Point(316, 294);
-            this.CreateUser.Name = "CreateUser";
-            this.CreateUser.Size = new System.Drawing.Size(105, 39);
-            this.CreateUser.TabIndex = 5;
-            this.CreateUser.Text = "Thêm";
-            this.CreateUser.UseVisualStyleBackColor = true;
+            this.CreateRole.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CreateRole.Location = new System.Drawing.Point(316, 294);
+            this.CreateRole.Name = "CreateRole";
+            this.CreateRole.Size = new System.Drawing.Size(105, 39);
+            this.CreateRole.TabIndex = 5;
+            this.CreateRole.Text = "Thêm";
+            this.CreateRole.UseVisualStyleBackColor = true;
+            this.CreateRole.Click += new System.EventHandler(this.CreateRole_Click);
             // 
-            // Username
+            // RoleName
             // 
-            this.Username.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Username.Location = new System.Drawing.Point(352, 168);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(260, 39);
-            this.Username.TabIndex = 2;
+            this.RoleName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RoleName.Location = new System.Drawing.Point(352, 168);
+            this.RoleName.Name = "RoleName";
+            this.RoleName.Size = new System.Drawing.Size(260, 39);
+            this.RoleName.TabIndex = 2;
             // 
             // label2
             // 
@@ -104,6 +106,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "ThemRole";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemRole";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -115,8 +118,8 @@
 
         private Button button1;
         private Panel panel1;
-        private Button CreateUser;
-        private TextBox Username;
+        private Button CreateRole;
+        private TextBox RoleName;
         private Label label2;
         private Label label1;
     }
