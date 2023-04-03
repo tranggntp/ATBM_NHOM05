@@ -12,9 +12,9 @@ namespace PhanHe1
 {
     public partial class XemQuyenUser : Form
     {
-        public XemQuyenUser()
+        private void InitializeComponent()
         {
-            InitializeComponent();
+            throw new NotImplementedException();
         }
 
         int lmao = 0;

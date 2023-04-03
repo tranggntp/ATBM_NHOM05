@@ -37,6 +37,9 @@
     <Compile Update="XemQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="XemQuyenUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="XoaRole.cs">
       <SubType>Form</SubType>
     </Compile>
