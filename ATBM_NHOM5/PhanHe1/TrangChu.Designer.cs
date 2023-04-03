@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.danhsachUser = new System.Windows.Forms.Button();
-            this.PanelMenu = new System.Windows.Forms.Panel();
-            this.dangxuat = new System.Windows.Forms.Button();
-            this.RoleThuHoiQuyen = new System.Windows.Forms.Button();
-            this.UserThuHoiQuyen = new System.Windows.Forms.Button();
-            this.PQHthong = new System.Windows.Forms.Button();
-            this.PQUsertoRole = new System.Windows.Forms.Button();
-            this.PQQTTable = new System.Windows.Forms.Button();
-            this.QuanLyUserRole = new System.Windows.Forms.Button();
-            this.RoleXemQuyen = new System.Windows.Forms.Button();
-            this.UserXemQuyen = new System.Windows.Forms.Button();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.PanelMenu.SuspendLayout();
-            this.SuspendLayout();
+            danhsachUser = new Button();
+            PanelMenu = new Panel();
+            dangxuat = new Button();
+            RoleThuHoiQuyen = new Button();
+            UserThuHoiQuyen = new Button();
+            PQHthong = new Button();
+            PQUsertoRole = new Button();
+            PQQTTable = new Button();
+            QuanLyUserRole = new Button();
+            RoleXemQuyen = new Button();
+            UserXemQuyen = new Button();
+            panelChildForm = new Panel();
+            PanelMenu.SuspendLayout();
+            SuspendLayout();
             // 
             // danhsachUser
             // 

@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace PhanHe1
 {
-    public partial class XemQuyenUser : Form
+    public partial class XemDsNguoiDung : Form
     {
-        public XemQuyenUser()
+        public XemDsNguoiDung()
         {
             InitializeComponent();
         }
 
-        int lmao = 0;
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
