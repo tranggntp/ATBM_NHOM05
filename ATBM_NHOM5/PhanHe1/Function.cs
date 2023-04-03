@@ -13,7 +13,11 @@ namespace PhanHe1
         public static OracleConnection Con;
 
         // sửa lại host name theo máy
+<<<<<<< HEAD
         private static string host_name = @"pc";
+=======
+        private static string host_name = @"LAPTOP-LR15QBT2";
+>>>>>>> main
 
 
         public static void InitConnection(String username, String password)
@@ -56,7 +60,10 @@ namespace PhanHe1
                 MessageBox.Show("Đóng kết nối với DB");
             }
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
         public static void RunSQL(string sql) // chạy câu lệnh sql
         {
             OracleCommand cmd = new OracleCommand();
@@ -108,6 +115,7 @@ namespace PhanHe1
             cmd = null;
             return 1;
         }
+<<<<<<< HEAD
         public static DataTable GetDataToTable(string sql) //Lấy dữ liệu đổ vào bảng
         {
             OracleCommand command = new OracleCommand();
@@ -139,6 +147,8 @@ namespace PhanHe1
             command = null;
         }
 
+=======
+>>>>>>> main
         public static bool CheckUserExisted(string username) // Hàm kiểm tra User có tồn tại hay không
         {
             OracleCommand cmd = new OracleCommand();
@@ -175,5 +185,25 @@ namespace PhanHe1
             cmd = null;
             return existed;
         }
+<<<<<<< HEAD
+=======
+        public static void FillComboBox(string sql, ComboBox comboBox)
+        {
+            OracleCommand command = new OracleCommand();
+            command.CommandText = sql;
+            command.Connection = Con;
+
+            OracleDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                for (int i = 0; i < reader.FieldCount; i++)
+                {
+                    comboBox.Items.Add(reader.GetString(i));
+                }
+            }
+            command.Dispose();
+            command = null;
+        }
+>>>>>>> main
     }
 }

@@ -66,6 +66,7 @@
             label3.Size = new Size(79, 21);
             label3.TabIndex = 2;
             label3.Text = "Priviledge";
+            label3.Click += label3_Click;
             // 
             // textBox1
             // 
