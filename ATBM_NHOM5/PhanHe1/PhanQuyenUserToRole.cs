@@ -26,5 +26,10 @@ namespace PhanHe1
         {
 
         }
+
+        private void PhanQuyenUserToRole_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

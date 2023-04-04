@@ -116,6 +116,7 @@
             Controls.Add(label1);
             Name = "PhanQuyenUserToRole";
             Text = "PhanQuyenUserToRole";
+            Load += PhanQuyenUserToRole_Load;
             ResumeLayout(false);
             PerformLayout();
         }

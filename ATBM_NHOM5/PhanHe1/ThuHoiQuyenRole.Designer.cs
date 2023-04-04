@@ -32,10 +32,10 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            txtBox_Privileges = new TextBox();
             txtBox_Role = new TextBox();
-            txtBox_Table = new TextBox();
             button1 = new Button();
+            cbx_privilege = new ComboBox();
+            cbx_table = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -78,13 +78,6 @@
             label4.TabIndex = 3;
             label4.Text = "Table";
             // 
-            // txtBox_Privileges
-            // 
-            txtBox_Privileges.Location = new Point(465, 189);
-            txtBox_Privileges.Name = "txtBox_Privileges";
-            txtBox_Privileges.Size = new Size(244, 23);
-            txtBox_Privileges.TabIndex = 4;
-            // 
             // txtBox_Role
             // 
             txtBox_Role.Location = new Point(465, 134);
@@ -92,13 +85,6 @@
             txtBox_Role.Size = new Size(244, 23);
             txtBox_Role.TabIndex = 5;
             txtBox_Role.TextChanged += txtBox_Role_TextChanged;
-            // 
-            // txtBox_Table
-            // 
-            txtBox_Table.Location = new Point(465, 238);
-            txtBox_Table.Name = "txtBox_Table";
-            txtBox_Table.Size = new Size(244, 23);
-            txtBox_Table.TabIndex = 6;
             // 
             // button1
             // 
@@ -111,21 +97,38 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += btn_xacnhan_Click1;
             // 
+            // cbx_privilege
+            // 
+            cbx_privilege.FormattingEnabled = true;
+            cbx_privilege.Location = new Point(465, 189);
+            cbx_privilege.Name = "cbx_privilege";
+            cbx_privilege.Size = new Size(244, 23);
+            cbx_privilege.TabIndex = 8;
+            // 
+            // cbx_table
+            // 
+            cbx_table.FormattingEnabled = true;
+            cbx_table.Location = new Point(465, 240);
+            cbx_table.Name = "cbx_table";
+            cbx_table.Size = new Size(244, 23);
+            cbx_table.TabIndex = 9;
+            // 
             // ThuHoiQuyenRole
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1176, 471);
+            Controls.Add(cbx_table);
+            Controls.Add(cbx_privilege);
             Controls.Add(button1);
-            Controls.Add(txtBox_Table);
             Controls.Add(txtBox_Role);
-            Controls.Add(txtBox_Privileges);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "ThuHoiQuyenRole";
             Text = "ThuHoiQuyenRole";
+            Load += ThuHoiQuyenRole_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -136,9 +139,9 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox txtBox_Privileges;
         private TextBox txtBox_Role;
-        private TextBox txtBox_Table;
         private Button button1;
+        private ComboBox cbx_privilege;
+        private ComboBox cbx_table;
     }
 }
