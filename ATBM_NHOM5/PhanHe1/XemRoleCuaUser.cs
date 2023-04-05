@@ -21,7 +21,7 @@ namespace PhanHe1
         private void LoadData_RoleUser()
         {
             string grantee = Username.Text.Trim().ToString().ToUpper();
-            if (Functions.CheckUserExisted(grantee) || Functions.CheckRoleExisted(grantee))//user/role có tồn tại
+            if (Functions.CheckUserExisted(grantee))//user  có tồn tại
             {
                 string sql = "SELECT * FROM DBA_ROLE_PRIVS WHERE GRANTEE = '" + grantee + "'";
                 dtTableName = Functions.GetDataToTable(sql);
