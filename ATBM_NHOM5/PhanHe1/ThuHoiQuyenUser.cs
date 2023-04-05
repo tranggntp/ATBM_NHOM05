@@ -68,5 +68,10 @@ namespace PhanHe1
             string getTables = "SELECT table_name FROM user_tables";
             Functions.FillComboBox(getTables, cbx_table);
         }
+
+        private void cbx_table_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

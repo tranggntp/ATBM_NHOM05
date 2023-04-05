@@ -113,6 +113,7 @@
             cbx_table.Name = "cbx_table";
             cbx_table.Size = new Size(291, 23);
             cbx_table.TabIndex = 8;
+            cbx_table.SelectedIndexChanged += cbx_table_SelectedIndexChanged;
             // 
             // ThuHoiQuyenUser
             // 
