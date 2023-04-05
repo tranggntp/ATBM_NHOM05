@@ -61,7 +61,7 @@
             // 
             this.btn_DangNhap.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_DangNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btn_DangNhap.Location = new System.Drawing.Point(322, 350);
+            this.btn_DangNhap.Location = new System.Drawing.Point(352, 360);
             this.btn_DangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(213, 89);
@@ -94,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(258, 47);
+            this.label1.Location = new System.Drawing.Point(309, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(303, 65);
@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 499);
+            this.ClientSize = new System.Drawing.Size(882, 499);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_DangNhap);

@@ -123,23 +123,10 @@ namespace PhanHe1
             OpenChildForm(new ThuHoiQuyenRole());
             ActivateButton(sender);
         }
-
-        //private void XemDanhSachRole_Click(object sender, EventArgs e)
-        //{
-        //    OpenChildForm(new XemDsRole());
-        //    ActivateButton(sender);
-        //}
-
-        //private void QuanLyUser_Role_Click(object sender, EventArgs e)
-        //{
-        //    OpenChildForm(new QuanLiUser_Role());
-        //    ActivateButton(sender);
-        //}
-
-        //private void CapQuyen_Click(object sender, EventArgs e)
-        //{
-        //    OpenChildForm(new TaoUser());
-        //    ActivateButton(sender);
-        //}
+        private void XemRoleCuaUser_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new XemRolecuaUser());
+            ActivateButton(sender);
+        }
     }
 }

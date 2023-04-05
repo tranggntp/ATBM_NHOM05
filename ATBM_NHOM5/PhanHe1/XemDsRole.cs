@@ -37,10 +37,10 @@ namespace PhanHe1
             dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 12);
 
             // set kích thước cột
-            dataGridView1.Columns[0].Width = 250;
-            dataGridView1.Columns[1].Width = 150;
-            dataGridView1.Columns[2].Width = 300;
-            dataGridView1.Columns[3].Width = 300;
+            dataGridView1.Columns[0].Width = 360;
+            dataGridView1.Columns[1].Width = 350;
+            dataGridView1.Columns[2].Width = 350;
+            dataGridView1.Columns[3].Width = 350;
 
             //Không cho người dùng thêm dữ liệu trực tiếp
             dataGridView1.AllowUserToAddRows = false;

@@ -7,9 +7,6 @@
     <Compile Update="PhanQuyenHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PhanQuyenUserToRole.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="QuanLiUser_Role.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -38,6 +35,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="XemQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XemRoleCuaUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="XoaRole.cs">
