@@ -87,17 +87,34 @@ namespace PhanHe1
 
         private void Grant_Click(object sender, EventArgs e)
         {
+            bool userExisted = Functions.CheckUserExisted(user_role);
+            bool roleExisted = Functions.CheckRoleExisted(user_role);
+
             if (!checkBox_WGO.Checked)
             {
-                string query = "GRANT " + privilege + " ON " + table + " TO " + user_role;
-                MessageBox.Show(query);
-                Functions.RunSQLwithResult(query);
+                if (userExisted || roleExisted)
+                {
+                    string query = "GRANT " + privilege + " ON " + table + " TO " + user_role;
+                    MessageBox.Show("Grant quyền thành công!");
+                    Functions.RunSQLwithResult(query);
+                }
+                else
+                {
+                    MessageBox.Show("User hoặc role không tồn tại!");
+                }
             }
             else
             {
-                string query = "GRANT " + privilege + " ON " + table + " TO " + user_role + " WITH GRANT OPTION";
-                MessageBox.Show(query);
-                Functions.RunSQLwithResult(query);
+                if (userExisted || roleExisted)
+                {
+                    string query = "GRANT " + privilege + " ON " + table + " TO " + user_role + " WITH GRANT OPTION";
+                    MessageBox.Show(query);
+                    Functions.RunSQLwithResult(query);
+                }
+                else
+                {
+                    MessageBox.Show("User hoặc role không tồn tại!");
+                }
             }
         }
 
@@ -113,9 +130,19 @@ namespace PhanHe1
 
         private void btn_RoleToUser_Click(object sender, EventArgs e)
         {
-            string query = "GRANT " + role2 + " TO " + user2;
-            MessageBox.Show(query);
-            Functions.RunSQLwithResult(query);
+            bool userExisted = Functions.CheckUserExisted(user2);
+            bool roleExisted = Functions.CheckRoleExisted(role2);
+
+            if (userExisted && roleExisted)
+            {
+                string query = "GRANT " + role2 + " TO " + user2;
+                MessageBox.Show("Grant quyền thành công!");
+                Functions.RunSQLwithResult(query);
+            }
+            else
+            {
+                MessageBox.Show("User hoặc role không tồn tại!");
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
