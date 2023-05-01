@@ -4,46 +4,67 @@
     <Compile Update="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PhanQuyenHeThong.cs">
+    <Compile Update="Admin\PhanQuyenHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="QuanLiUser_Role.cs">
+    <Compile Update="Admin\QuanLiUser_Role.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SuaUser.cs">
+    <Compile Update="Admin\SuaUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TaoUser.cs">
+    <Compile Update="Admin\TaoUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ThemRole.cs">
+    <Compile Update="Admin\ThemRole.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ThuHoiQuyenRole.cs">
+    <Compile Update="Admin\ThuHoiQuyenRole.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ThuHoiQuyenUser.cs">
+    <Compile Update="Admin\ThuHoiQuyenUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TrangChu.cs">
+    <Compile Update="Admin\TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="XemDsNguoiDung.cs">
+    <Compile Update="Admin\XemDsNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="XemDsRole.cs">
+    <Compile Update="Admin\XemDsRole.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="XemQuyen.cs">
+    <Compile Update="Admin\XemQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="XemRoleCuaUser.cs">
+    <Compile Update="Admin\XemRoleCuaUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="XoaRole.cs">
+    <Compile Update="Admin\XoaRole.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="XoaUser.cs">
+    <Compile Update="Admin\XoaUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TruongDeAn\Form_TruongDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NhanVien\Form_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NhanVien\XemDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NhanVien\XemPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NhanVien\XemPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NhanVien\XemTTCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TruongDeAn\QuanLyDeAn.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

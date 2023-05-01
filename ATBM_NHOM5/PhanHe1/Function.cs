@@ -5,18 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 using System.Data;
+using System.Net;
 
 namespace PhanHe1
 {
     public class Functions
     {
+        protected static string GetHostName()
+        {
+            return System.Net.Dns.GetHostName();
+        }
+
         public static OracleConnection Con;
 
-        // sửa lại host name theo máy
-        //private static string host_name = @"pc";
-
-        private static string host_name = @"DESKTOP-J4KC12Q";
-        //private static string host_name = @"qthang";
+        private static string host_name = GetHostName();
 
         public static void InitConnection(String username, String password)
         {
@@ -29,12 +31,6 @@ namespace PhanHe1
             try
             {
                 Con.Open();
-
-                //if (Con.State == ConnectionState.Open)
-                //{
-                //    MessageBox.Show("Kết nối DB thành công");
-                //}
-
             }
             catch (OracleException ex)
             {
@@ -122,6 +118,7 @@ namespace PhanHe1
             return dataTable;
         }
 
+        // Hàm đổ dữ liệu vào combobox
         public static void FillComboBox(string sql, ComboBox comboBox)
         {
             OracleCommand command = new OracleCommand();
@@ -139,6 +136,25 @@ namespace PhanHe1
             command.Dispose();
             command = null;
         }
+
+        public static void FillTextBox(string sql, TextBox txtbox1)
+        {
+            OracleCommand command = new OracleCommand();
+            command.CommandText = sql;
+            command.Connection = Con;
+
+            OracleDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                for (int i = 0; i < reader.FieldCount; i++)
+                {
+                    txtbox1.Text=reader.GetString(0);
+                }
+            }
+            command.Dispose();
+            command = null;
+        }
+
 
         public static bool CheckUserExisted(string username) // Hàm kiểm tra User có tồn tại hay không
         {

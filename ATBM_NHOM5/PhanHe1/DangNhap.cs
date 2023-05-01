@@ -28,15 +28,27 @@ namespace PhanHe1
         public void MoFormAdmin()
         {
             Application.Run(new TrangChu(username, password));
-            //Application.Run(new frmMain());
         }
+
+        public void MoFormNhanVien()
+        {
+            Application.Run(new Form_NhanVien(username));
+            //Application.Run(new Form_NhanVien(username, password));
+        }
+
+        public void MoFormTruongDeAn()
+        {
+            Application.Run(new Form_TruongDeAn(username));
+            //Application.Run(new Form_NhanVien(username, password));
+        }
+
+
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            //username = "U_AD";
-            //password = "0";
-
-            username = "AD_N5";
-            password = "abc";
+            //username = Username.Text.Trim().ToString();
+            //password = Password.Text.Trim().ToString();
+            username = "NV_NV016";
+            password = "123";
 
             // nếu chưa có dữ liệu 
             if (username.Length == 0 | password.Length == 0)
@@ -46,10 +58,8 @@ namespace PhanHe1
             }
             
             Login(username, password);
-            //U_AD
-            //if (username.Substring(2) == "AD")
-            //AD_1
-            if (username.Contains("AD"))
+
+            if (username.Contains("AD_"))
             {
                 this.Close();
                 t = new Thread(MoFormAdmin);
@@ -57,8 +67,24 @@ namespace PhanHe1
                 t.Start();
                 return;
             }
-            // Kiểm tra tên đăng nhập           
 
+            if (username.Contains("NV_"))//Nhân viên bình thường
+            {
+                this.Close();
+                t = new Thread(MoFormNhanVien);
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+                return;
+            }
+
+            if (username.Contains("TDA_"))//TDA_NV006
+            {
+                this.Close();
+                t = new Thread(MoFormTruongDeAn);
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+                return;
+            }
         }
 
         private void Login(String username, String password)
