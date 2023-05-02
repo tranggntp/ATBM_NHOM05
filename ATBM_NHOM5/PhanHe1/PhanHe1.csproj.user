@@ -46,6 +46,18 @@
     <Compile Update="Admin\XoaUser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TaiChinh\capNhatLuongPhuCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TaiChinh\Form_TaiChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TaiChinh\xemToanBoNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TaiChinh\xemToanBoPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="TruongDeAn\Form_TruongDeAn.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -43,11 +43,24 @@ namespace PhanHe1
         }
 
 
+        public void MoFormTaiChinh()
+        {
+            Application.Run(new Form_TaiChinh(username));
+            //Application.Run(new Form_NhanVien(username, password));
+        }
+
+
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
             //username = Username.Text.Trim().ToString();
             //password = Password.Text.Trim().ToString();
-            username = "NV_NV016";
+            //username = "NV_NV016";
+            //password = "123";
+
+            //username = "TDA_NV006";
+            //password = "123";
+
+            username = "TC_NV025";
             password = "123";
 
             // nếu chưa có dữ liệu 
@@ -85,6 +98,23 @@ namespace PhanHe1
                 t.Start();
                 return;
             }
+
+            if (username.Contains("TC_"))//TC_NV025
+            {
+                this.Close();
+                t = new Thread(MoFormTaiChinh);
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+                return;
+            }
+
+
+
+
+
+
+
+
         }
 
         private void Login(String username, String password)
