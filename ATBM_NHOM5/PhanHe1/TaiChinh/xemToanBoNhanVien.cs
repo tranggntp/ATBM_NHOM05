@@ -21,7 +21,7 @@ namespace PhanHe1
 
         private void XemToanBoNhanVien_Load(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM ad_n5.NHANVIEN";
+            string sql = "select * from AD_N5.view_decrypt_LUONGPHUCAP";
             dtTableName = Functions.GetDataToTable(sql);
             dataGridView1.DataSource = dtTableName;
 

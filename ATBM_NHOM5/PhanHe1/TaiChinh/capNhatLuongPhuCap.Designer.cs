@@ -36,6 +36,7 @@
             txtBox_tien = new TextBox();
             txtBox_maNV = new TextBox();
             btn_capNhat = new Button();
+            btn_thoat = new Button();
             SuspendLayout();
             // 
             // label1
@@ -107,11 +108,21 @@
             btn_capNhat.UseVisualStyleBackColor = true;
             btn_capNhat.Click += btn_capNhat_Click;
             // 
+            // btn_thoat
+            // 
+            btn_thoat.Location = new Point(12, 12);
+            btn_thoat.Name = "btn_thoat";
+            btn_thoat.Size = new Size(91, 34);
+            btn_thoat.TabIndex = 8;
+            btn_thoat.Text = "thoát";
+            btn_thoat.UseVisualStyleBackColor = true;
+            // 
             // capNhatLuongPhuCap
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btn_thoat);
             Controls.Add(btn_capNhat);
             Controls.Add(txtBox_maNV);
             Controls.Add(txtBox_tien);
@@ -137,5 +148,6 @@
         private TextBox txtBox_tien;
         private TextBox txtBox_maNV;
         private Button btn_capNhat;
+        private Button btn_thoat;
     }
 }
