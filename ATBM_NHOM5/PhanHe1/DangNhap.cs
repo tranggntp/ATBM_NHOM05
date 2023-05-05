@@ -90,7 +90,7 @@ namespace PhanHe1
                 return;
             }
 
-            if (username.Contains("TDA_"))//TDA_NV006
+            if (username.Contains("TDA_"))//Trưởng đề án
             {
                 this.Close();
                 t = new Thread(MoFormTruongDeAn);

@@ -253,10 +253,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(766, 427);
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(726, 400);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 38);
+            this.button1.Size = new System.Drawing.Size(157, 51);
             this.button1.TabIndex = 23;
             this.button1.Text = "Cập Nhật";
             this.button1.UseVisualStyleBackColor = true;
@@ -269,13 +270,12 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(320, 31);
             this.dateTimePicker1.TabIndex = 12;
             this.dateTimePicker1.Value = new System.DateTime(2023, 5, 1, 0, 0, 0, 0);
-
             // 
             // XemTTCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 750);
+            this.ClientSize = new System.Drawing.Size(1143, 536);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox11);

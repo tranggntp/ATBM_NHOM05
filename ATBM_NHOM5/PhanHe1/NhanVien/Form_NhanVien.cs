@@ -70,6 +70,10 @@ namespace PhanHe1
         {
             Application.Run(new Form_TruongDeAn(InUserName));
         }
+        public void QuayLaiTC()
+        {
+            Application.Run(new Form_TaiChinh(InUserName));
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -79,7 +83,11 @@ namespace PhanHe1
             else if (InUserName.Contains("TDA_")) 
             { 
                 t = new Thread(QuayLaiTDA);
-            }    
+            }
+            else if (InUserName.Contains("TC_"))
+            {
+                t = new Thread(QuayLaiTC);
+            }
             t.SetApartmentState(ApartmentState.STA);
             t.Start();
         }

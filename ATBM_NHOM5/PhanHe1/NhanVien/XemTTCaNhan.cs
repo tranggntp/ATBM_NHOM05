@@ -37,37 +37,38 @@ namespace PhanHe1
             textBox11.Text = dtTableName.Rows[0][10].ToString();
         }
 
-        //private void RunSP_UpdateThongTin()
-        //{
-        //    OracleCommand command = new OracleCommand("ad_n5.usp_NhanVien_UpdateThongTin",Functions.Con);
-        //    command.CommandType = CommandType.StoredProcedure;
+        private void RunSP_UpdateThongTin()
+        {
+            OracleCommand command = new OracleCommand("AD_N5.usp_NhanVien_UpdateThongTin", Functions.Con);
+            command.CommandType = CommandType.StoredProcedure;
 
-        //    //command.Parameters.Add("@updated_NgaySinh", OracleDbType.Varchar2).Value= textBox4.Text.Trim().ToString();
-        //    command.Parameters.Add("updated_DiaChi", OracleDbType.Varchar2).Value = textBox5.Text.Trim().ToString();
-        //    command.Parameters.Add("updated_SDT", OracleDbType.Varchar2).Value = textBox6.Text.Trim().ToString();
-        //    //var returnParameter = command.Parameters.Add("@ReturnVal", SqlDbType.Int);
-        //    //returnParameter.Direction = ParameterDirection.ReturnValue;
+            OracleParameter param1 = new OracleParameter("updated_DiaChi", OracleDbType.Varchar2);
+            OracleParameter param2 = new OracleParameter("updated_SDT", OracleDbType.Varchar2);
+            OracleParameter param3 = new OracleParameter("updated_NgaySinh", OracleDbType.Varchar2);
 
-        //    ////set giá trị
-        //    //command.Parameters["updated_NgaySinh"].Value= textBox4.Text.Trim().ToString();
-        //    //command.Parameters["updated_DiaChi"].Value = textBox5.Text.Trim().ToString();
-        //    //command.Parameters["updated_SDT"].Value = textBox6.Text.Trim().ToString();
+            command.Parameters.Add(param1);
+            command.Parameters.Add(param2);
+            command.Parameters.Add(param3);
 
-        //    command.ExecuteNonQuery();
+            ////set giá trị
+            param1.Value = textBox5.Text.Trim().ToString();
+            param2.Value = textBox6.Text.Trim().ToString();
+            param3.Value = dateTimePicker1.Value.ToShortDateString();
 
-        //    //return Int32.Parse(returnParameter.Value.ToString());
-
-        //}
+            command.ExecuteNonQuery();
+        }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE AD_N5.NHANVIEN SET " +
-            "NGAYSINH = TO_DATE('" + dateTimePicker1.Value.ToShortDateString() + "','mm//dd/yyyy'), " +
-            "DIACHI = '" + textBox5.Text.Trim().ToString() + "', " +
-            "SODT = '" + textBox6.Text.Trim().ToString() + "' ";
-            Functions.RunSQL(sql);
-            MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try { 
+                RunSP_UpdateThongTin();
+                MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cập nhật thất bại, mã lỗi: " + ex.Message);
+            }
         }
     }
 }

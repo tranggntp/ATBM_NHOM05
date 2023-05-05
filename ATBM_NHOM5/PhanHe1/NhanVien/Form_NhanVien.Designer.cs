@@ -34,6 +34,8 @@
             this.xemDeAn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // xemNhanVien
@@ -82,36 +84,47 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 172);
+            this.panel1.Location = new System.Drawing.Point(0, 177);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1113, 531);
+            this.panel1.Size = new System.Drawing.Size(1123, 526);
             this.panel1.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(987, 117);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(944, 115);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
+            this.button1.Size = new System.Drawing.Size(145, 43);
             this.button1.TabIndex = 7;
             this.button1.Text = "Thoát";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(0, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1123, 170);
+            this.panel2.TabIndex = 8;
             // 
             // Form_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 702);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.xemDeAn);
             this.Controls.Add(this.xemPhongBan);
             this.Controls.Add(this.xemPhanCong);
             this.Controls.Add(this.xemNhanVien);
+            this.Controls.Add(this.panel2);
             this.Name = "Form_NhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_NhanVien";
             this.Load += new System.EventHandler(this.Form_NhanVien_Load);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -124,5 +137,6 @@
         private Button xemDeAn;
         private Panel panel1;
         private Button button1;
+        private Panel panel2;
     }
 }
