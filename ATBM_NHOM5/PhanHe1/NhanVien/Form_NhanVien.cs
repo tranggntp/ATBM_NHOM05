@@ -1,4 +1,6 @@
 ﻿using Oracle.ManagedDataAccess.Client;
+using PhanHe1.NHANSU;
+using PhanHe1.TRUONGPHONG;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,6 +76,14 @@ namespace PhanHe1
         {
             Application.Run(new Form_TaiChinh(InUserName));
         }
+        public void QuayLaiTP()
+        {
+            Application.Run(new FormMain_TRUONGPHONG(InUserName));
+        }
+        public void QuayLaiNS()
+        {
+            Application.Run(new FormMainNHANSU(InUserName));
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -87,6 +97,10 @@ namespace PhanHe1
             else if (InUserName.Contains("TC_"))
             {
                 t = new Thread(QuayLaiTC);
+            }
+            else if (InUserName.Contains("TP_"))
+            {
+                t = new Thread(QuayLaiTP);
             }
             t.SetApartmentState(ApartmentState.STA);
             t.Start();
