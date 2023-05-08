@@ -79,25 +79,17 @@ namespace PhanHe1
 
         private void btn_xemToanBoPhanCong_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t = new Thread(xemToanBoPhanCong);
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
+            
+            OpenChildForm(new xemToanBoPhanCong());
         }
         private void btn_xemToanBoNhanVien_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t = new Thread(xemToanBoNhanVien);
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
+            OpenChildForm(new xemToanBoNhanVien());
         }
 
         private void btn_capNhatLuongPhuCap_Click(object sender, EventArgs e)
         {
-            this.Close();
-            t = new Thread(capNhatLuongPhuCap);
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
+            OpenChildForm(new capNhatLuongPhuCap());
         }
     }
 }
