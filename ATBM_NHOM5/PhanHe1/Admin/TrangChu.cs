@@ -1,4 +1,5 @@
 ﻿using PhanHe1.Admin;
+using PhanHe1.TRUONGPHONG;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -130,10 +131,17 @@ namespace PhanHe1
             ActivateButton(sender);
         }
 
+        public void OpenFormAudit()
+        {
+            Application.Run(new Audit());
+        }
+
+
         private void btn_Audit_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Audit());
-            ActivateButton(sender);
+            t = new Thread(OpenFormAudit);
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
         }
     }
 }
