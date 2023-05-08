@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhanHe1.Admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -126,6 +127,12 @@ namespace PhanHe1
         private void XemRoleCuaUser_Click(object sender, EventArgs e)
         {
             OpenChildForm(new XemRolecuaUser());
+            ActivateButton(sender);
+        }
+
+        private void btn_Audit_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Audit());
             ActivateButton(sender);
         }
     }
