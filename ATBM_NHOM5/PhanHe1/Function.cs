@@ -192,5 +192,21 @@ namespace PhanHe1
             cmd = null;
             return existed;
         }
+        public static string GetFieldValues(string sql)
+        {
+            string fieldValue = "";
+            using (OracleCommand command = new OracleCommand(sql, Con))
+            {
+                using (OracleDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        fieldValue = reader[0].ToString();
+                    }
+                }
+            }
+            return fieldValue;
+        }
+
     }
 }

@@ -1,4 +1,6 @@
 ﻿using PhanHe1.QuanLyTrucTiep;
+﻿using PhanHe1.NHANSU;
+using PhanHe1.TRUONGPHONG;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,6 +58,16 @@ namespace PhanHe1
             //Application.Run(new Form_NhanVien(username, password));
         }
 
+        public void MoFormTruongPhong()
+        {
+            Application.Run(new FormMain_TRUONGPHONG(username));
+            //Application.Run(new Form_NhanVien(username, password));
+        }
+        public void MoFormNhanSu()
+        {
+            Application.Run(new FormMainNHANSU(username));
+            //Application.Run(new Form_NhanVien(username, password));
+        }
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
@@ -110,6 +122,22 @@ namespace PhanHe1
             {
                 this.Close();
                 t = new Thread(MoFormTaiChinh);
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+                return;
+            }
+            if (username.Contains("TP_"))
+            {
+                this.Close();
+                t = new Thread(MoFormTruongPhong);
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+                return;
+            }
+            if (username.Contains("NS_"))
+            {
+                this.Close();
+                t = new Thread(MoFormNhanSu);
                 t.SetApartmentState(ApartmentState.STA);
                 t.Start();
                 return;
