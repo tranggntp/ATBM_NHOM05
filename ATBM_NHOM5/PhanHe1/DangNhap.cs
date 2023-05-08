@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhanHe1.QuanLyTrucTiep;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,19 +50,25 @@ namespace PhanHe1
             //Application.Run(new Form_NhanVien(username, password));
         }
 
+        public void MoFormQuanLyTrucTiep()
+        {
+            Application.Run(new Form_QuanLyTrucTiep(username));
+            //Application.Run(new Form_NhanVien(username, password));
+        }
+
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            //username = Username.Text.Trim().ToString();
-            //password = Password.Text.Trim().ToString();
+            username = Username.Text.Trim().ToString();
+            password = Password.Text.Trim().ToString();
             //username = "NV_NV016";
             //password = "123";
 
             //username = "TDA_NV006";
             //password = "123";
 
-            username = "TC_NV025";
-            password = "123";
+            //username = "TC_NV025";
+            //password = "123";
 
             // nếu chưa có dữ liệu 
             if (username.Length == 0 | password.Length == 0)
@@ -108,12 +115,14 @@ namespace PhanHe1
                 return;
             }
 
-
-
-
-
-
-
+            if (username.Contains("QLTT_"))
+            {
+                this.Close();
+                t = new Thread(MoFormQuanLyTrucTiep);
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+                return;
+            }
 
         }
 
