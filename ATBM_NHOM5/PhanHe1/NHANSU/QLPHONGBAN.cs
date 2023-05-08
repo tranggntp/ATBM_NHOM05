@@ -80,7 +80,7 @@ namespace PhanHe1.NHANSU
             }
             string q = "SELECT COUNT(*) FROM AD_N5.NHANVIEN_NHANSU WHERE MANV = '" + textBox3.Text.Trim().ToString() + "'";
             string countStr2 = Functions.GetFieldValues(q);
-            int count2 = int.Parse(countStr1); // Chuyển đổi kiểu dữ liệu từ string sang int
+            int count2 = int.Parse(countStr2); // Chuyển đổi kiểu dữ liệu từ string sang int
             if (count2 <= 0)
             {
                 MessageBox.Show("Mã nhân viên này không tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -137,7 +137,7 @@ namespace PhanHe1.NHANSU
             }
             string q = "SELECT COUNT(*) FROM AD_N5.NHANVIEN_NHANSU WHERE MANV = '" + textBox3.Text.Trim().ToString() + "'";
             string countStr2 = Functions.GetFieldValues(q);
-            int count2 = int.Parse(countStr1); // Chuyển đổi kiểu dữ liệu từ string sang int
+            int count2 = int.Parse(countStr2); // Chuyển đổi kiểu dữ liệu từ string sang int
             if (count2 <= 0)
             {
                 MessageBox.Show("Mã nhân viên này không tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

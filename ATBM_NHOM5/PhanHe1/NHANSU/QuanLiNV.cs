@@ -214,11 +214,11 @@ namespace PhanHe1.NHANSU
                 try
                 {
                     RunSP_UPDATE_NHANVIEN();
-                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Thêm thất bại!!" + ex.Message);
+                    MessageBox.Show("Cập nhật thất bại!!" + ex.Message);
                 }
             }
             QuanLiNV_Load(sender, e);

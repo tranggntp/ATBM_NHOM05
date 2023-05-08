@@ -88,7 +88,7 @@ namespace PhanHe1.TRUONGPHONG
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Thêm thất bại!!");
+                    MessageBox.Show("Thêm thất bại!!" + ex.Message);
                 }
             }
             PHANCONG_Load(sender, e);

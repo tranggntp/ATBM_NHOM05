@@ -102,6 +102,10 @@ namespace PhanHe1
             {
                 t = new Thread(QuayLaiTP);
             }
+            else if (InUserName.Contains("NS_"))
+            {
+                t = new Thread(QuayLaiNS);
+            }
             t.SetApartmentState(ApartmentState.STA);
             t.Start();
         }
