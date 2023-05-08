@@ -46,6 +46,15 @@
     <Compile Update="Admin\XoaUser.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
+    <Compile Update="QuanLyTrucTiep\Form_QuanLyTrucTiep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QuanLyTrucTiep\XemDanhSachNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QuanLyTrucTiep\XemDanhSachPhanCong.cs">
+=======
     <Compile Update="NHANSU\FormMainNHANSU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +62,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="NHANSU\QuanLiNV.cs">
+>>>>>>> ea968d6dabf20fac629153cd13fbe5788db05015
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TaiChinh\capNhatLuongPhuCap.cs">

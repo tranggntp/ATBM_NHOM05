@@ -22,6 +22,7 @@ namespace PhanHe1
             InUsername = username;
         }
         private Form activeform = null;
+
         private void OpenChildForm(Form childForm)
         {
             if (activeform != null)
@@ -35,6 +36,7 @@ namespace PhanHe1
             childForm.BringToFront();
             childForm.Show();
         }
+
         public void openFormNhanVien(object obj)
         {
             Application.Run(new Form_NhanVien(InUsername));

@@ -1,3 +1,4 @@
+﻿using PhanHe1.QuanLyTrucTiep;
 ﻿using PhanHe1.NHANSU;
 using PhanHe1.TRUONGPHONG;
 using System;
@@ -50,6 +51,13 @@ namespace PhanHe1
             Application.Run(new Form_TaiChinh(username));
             //Application.Run(new Form_NhanVien(username, password));
         }
+
+        public void MoFormQuanLyTrucTiep()
+        {
+            Application.Run(new Form_QuanLyTrucTiep(username));
+            //Application.Run(new Form_NhanVien(username, password));
+        }
+
         public void MoFormTruongPhong()
         {
             Application.Run(new FormMain_TRUONGPHONG(username));
@@ -135,12 +143,14 @@ namespace PhanHe1
                 return;
             }
 
-
-
-
-
-
-
+            if (username.Contains("QLTT_"))
+            {
+                this.Close();
+                t = new Thread(MoFormQuanLyTrucTiep);
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+                return;
+            }
 
         }
 
