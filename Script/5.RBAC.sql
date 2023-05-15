@@ -1,0 +1,805 @@
+-- --chay voi quyen SYS
+-- GRANT EXECUTE ON DBMS_RLS TO AD_N5;
+-- GRANT EXECUTE ON DBMS_CRYPTO TO AD_N5;
+
+CONNECT AD_N5/123;
+
+--PROC UPDATE TT CA NHAN CUA MINH 
+CREATE OR REPLACE PROCEDURE usp_NhanVien_UpdateThongTin (updated_DiaChi in varchar2, updated_SDT in varchar2, updated_NgaySinh in varchar2)
+AS
+BEGIN
+  UPDATE AD_N5.NHANVIEN
+  SET NGAYSINH = TO_DATE(updated_NgaySinh,'mm//dd/yyyy');
+  UPDATE AD_N5.NHANVIEN
+  SET DIACHI = updated_DiaChi;
+  UPDATE AD_N5.NHANVIEN
+  SET SODT = updated_SDT;
+END;
+/
+grant execute on AD_N5.usp_NhanVien_UpdateThongTin to RL_NHANVIEN
+
+--PROC TDA THEM 1 DEAN MOI
+/
+CREATE OR REPLACE PROCEDURE usp_TruongDeAn_ThemDeAn (mada in varchar2,tenda in varchar2, ngay in varchar2, phong in varchar2)
+AS
+BEGIN
+    INSERT INTO AD_N5.DEAN VALUES(mada,tenda,TO_DATE(ngay ,'mm//dd/yyyy'),phong);
+END;
+/
+grant execute on AD_N5.usp_TruongDeAn_ThemDeAn to RL_TRUONGDEAN;
+/
+-----------------------------------------------------------
+-- --chay voi quyen SYS
+-- GRANT EXECUTE ON DBMS_RLS TO AD_N5;
+-- GRANT EXECUTE ON DBMS_CRYPTO TO AD_N5;
+
+CONNECT AD_N5/123;
+
+-- CS#1:
+/
+DROP ROLE RL_NHANVIEN;
+CREATE ROLE RL_NHANVIEN;
+
+--proc tao user nhanvien
+/
+CREATE OR REPLACE PROCEDURE usp_DropUser_NHANVIEN
+AS
+    CURSOR CUR IS ( SELECT USERNAME
+                 FROM DBA_USERS
+                 WHERE INSTR(USERNAME, 'NV_') != 0);
+    sql_str VARCHAR(2000);
+    Usr varchar2(30);
+    cnt number := 0;
+    
+BEGIN
+    OPEN CUR;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+    EXECUTE IMMEDIATE (sql_str);
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+        sql_str := 'DROP USER '||Usr||' CASCADE';
+        BEGIN
+            EXECUTE IMMEDIATE (sql_str);
+            cnt := cnt + 1;
+        EXCEPTION
+            WHEN OTHERS THEN NULL;
+        END;
+    END LOOP;
+END;
+/
+EXEC usp_DropUser_NHANVIEN;
+/
+--tao user Nhan Vien
+CREATE OR REPLACE PROCEDURE usp_CreateUser_NhanVien
+AS
+    CURSOR CUR IS ( SELECT MANV
+                 FROM NHANVIEN
+                 WHERE VAITRO='Nhan Vien');
+    sql_str VARCHAR(2000);
+    ck_User int;
+    Usr varchar2(30);
+    
+BEGIN
+    OPEN CUR;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+    EXECUTE IMMEDIATE (sql_str);
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+
+        sql_str := 'CREATE USER NV_'||Usr||' IDENTIFIED BY '|| '123';
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT CREATE SESSION TO NV_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT CONNECT TO NV_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT RL_NHANVIEN TO NV_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+    END LOOP;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=FALSE';
+    EXECUTE IMMEDIATE (sql_str);
+END;
+/
+
+EXEC usp_CreateUser_NhanVien;
+/
+
+--y1
+CREATE OR REPLACE VIEW NV_XEMPHANCONG
+AS
+SELECT * FROM PHANCONG
+WHERE INSTR(SYS_CONTEXT('USERENV', 'SESSION_USER'),MANV) !=0;
+/
+GRANT SELECT ON NV_XEMPHANCONG TO RL_NHANVIEN;
+/
+CREATE OR REPLACE VIEW NV_XEMNHANVIEN
+AS
+SELECT MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT,
+AD_N5.FUNC_DECRYPT(LUONG) AS LUONG,
+AD_N5.FUNC_DECRYPT(PHUCAP) AS PHUCAP,
+VAITRO, MANQL, PHG
+FROM NHANVIEN
+WHERE MANV = SUBSTR(SYS_CONTEXT('USERENV', 'SESSION_USER'),-5)
+WITH CHECK OPTION;
+/
+GRANT SELECT ON NV_XEMNHANVIEN TO RL_NHANVIEN;
+/
+--y2
+/
+--tao function
+CONNECT AD_N5/123;
+CREATE OR REPLACE FUNCTION CS1_Y2(P_SCHEMA VARCHAR2, P_OBJ VARCHAR2) 
+RETURN VARCHAR2 
+AS 
+    login_user varchar2(255);
+BEGIN 
+    login_user := SYS_CONTEXT('USERENV','SESSION_USER');
+    if login_user = 'AD_N5' then
+        return '1=1';
+    elsif login_user like 'NS%' then
+        return '1=1';
+    else
+        return  'MANV   = '''||SUBSTR(login_user,-5)||'''';
+    end if;
+END;
+/
+BEGIN 
+    DBMS_RLS.DROP_POLICY( 
+    OBJECT_SCHEMA => 'AD_N5', 
+    OBJECT_NAME =>'NHANVIEN', 
+    POLICY_NAME => 'CS1_UPDATE_CHINHMINH'); 
+END; 
+/
+--tao policy
+
+BEGIN 
+    DBMS_RLS.ADD_POLICY(OBJECT_SCHEMA =>'AD_N5', 
+    OBJECT_NAME=>'NHANVIEN', 
+    POLICY_NAME =>'CS1_UPDATE_CHINHMINH', 
+    POLICY_FUNCTION=>'CS1_Y2', 
+    STATEMENT_TYPES=>'UPDATE',
+    UPDATE_CHECK => TRUE,
+    sec_relevant_cols=> 'NGAYSINH, DIACHI, SODT'); 
+END;
+/
+
+GRANT UPDATE ON NHANVIEN TO RL_NHANVIEN;
+/
+--y3:
+GRANT SELECT ON PHONGBAN TO RL_NHANVIEN;
+GRANT SELECT ON DEAN TO RL_NHANVIEN;
+/
+--CS#3
+--TRUONGPHONG
+
+
+CONNECT AD_N5/123;
+/
+ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
+DROP ROLE RL_TRUONGPHONG;
+CREATE ROLE RL_TRUONGPHONG;
+--drop TRUONGHONG
+/
+CREATE OR REPLACE PROCEDURE usp_DropUser_TRUONGPHONG
+AS
+    CURSOR CUR IS ( SELECT USERNAME
+                 FROM DBA_USERS
+                 WHERE INSTR(USERNAME, 'TP_') != 0);
+    sql_str VARCHAR(2000);
+    Usr varchar2(30);
+    cnt number := 0;
+    
+BEGIN
+    OPEN CUR;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+    EXECUTE IMMEDIATE (sql_str);
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+        sql_str := 'DROP USER '||Usr||' CASCADE';
+        BEGIN
+            EXECUTE IMMEDIATE (sql_str);
+            cnt := cnt + 1;
+        EXCEPTION
+            WHEN OTHERS THEN NULL;
+        END;
+    END LOOP;
+END;
+/
+EXEC usp_DropUser_TRUONGPHONG;
+/
+--tao user TRUONGPHONG
+CREATE OR REPLACE PROCEDURE usp_CreateUser_TRUONGPHONG
+AS
+    CURSOR CUR IS ( SELECT MANV
+                 FROM NHANVIEN
+                 WHERE VAITRO='Truong Phong');
+    sql_str VARCHAR(2000);
+    ck_User int;
+    Usr varchar2(30);
+    
+BEGIN
+    OPEN CUR;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+    EXECUTE IMMEDIATE (sql_str);
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+
+        sql_str := 'CREATE USER TP_'||Usr||' IDENTIFIED BY '|| '123';
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT CREATE SESSION TO TP_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT CONNECT TO TP_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT RL_TRUONGPHONG TO TP_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT RL_NHANVIEN TO TP_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+    END LOOP;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=FALSE';
+    EXECUTE IMMEDIATE (sql_str);
+END;
+/
+EXEC usp_CreateUser_TRUONGPHONG;
+/
+
+--y1: 
+CONNECT AD_N5/123;
+CREATE OR REPLACE VIEW TRUONGPHONG_NHANVIEN AS
+SELECT  MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, VAITRO, MANQL,PHG
+FROM NHANVIEN
+WHERE PHG IN (SELECT PHG FROM NHANVIEN WHERE VAITRO = 'Truong Phong' and INSTR(SYS_CONTEXT('USERENV', 'SESSION_USER'),MANV) !=0);
+GRANT SELECT ON TRUONGPHONG_NHANVIEN TO RL_TRUONGPHONG;
+
+--y2
+-- Co the them, xoa, cap nhat tren quan he PHANCONG lien quan den cac nhan vien thuoc phong ban ma T lam truong phong
+CONNECT AD_N5/123;
+CREATE OR REPLACE VIEW TP_PC AS
+SELECT PC.*
+FROM NHANVIEN NV JOIN PHANCONG PC ON NV.MANV = PC.MANV
+WHERE PHG IN (SELECT PHG FROM NHANVIEN WHERE VAITRO = 'Truong Phong' and INSTR(SYS_CONTEXT('USERENV', 'SESSION_USER'),MANV) !=0);
+    
+GRANT SELECT,INSERT, DELETE, UPDATE ON AD_N5.TP_PC TO RL_TRUONGPHONG;
+--tao function
+--DROP FUNCTION CS3_Y2;
+
+CREATE OR REPLACE FUNCTION CS3_Y2(P_SCHEMA VARCHAR2, P_OBJ VARCHAR2) 
+RETURN VARCHAR2 
+AS
+    V_QUERY VARCHAR2(255);
+BEGIN
+    V_QUERY := 'MANV IN (SELECT NHANVIEN.MANV 
+                FROM NHANVIEN, PHONGBAN
+                WHERE TRPHG = SUBSTR(SYS_CONTEXT(''USERENV'', ''SESSION_USER''), -5)
+                    AND NHANVIEN.PHG = PHONGBAN.MAPB)';
+    RETURN V_QUERY;
+END;
+/
+
+-- XOA POLICY
+BEGIN 
+    DBMS_RLS.DROP_POLICY( 
+    OBJECT_SCHEMA => 'AD_N5', 
+    OBJECT_NAME =>'PHANCONG', 
+    POLICY_NAME => 'CS3_IDU_PHANCONG'); 
+END; 
+/
+-- TAO POLICY
+BEGIN 
+    DBMS_RLS.ADD_POLICY(
+    OBJECT_SCHEMA =>'AD_N5', 
+    OBJECT_NAME=>'PHANCONG', 
+    POLICY_NAME =>'CS3_IDU_PHANCONG', 
+    POLICY_FUNCTION=>'CS3_Y2', 
+    STATEMENT_TYPES=>'INSERT, DELETE, UPDATE',
+    UPDATE_CHECK => TRUE
+    );
+END;
+/
+CONNECT AD_N5/123;
+GRANT INSERT, DELETE, UPDATE ON PHANCONG TO RL_TRUONGPHONG;
+--PROC INSERT_PHANCONG_TP
+CONNECT AD_N5/123;
+
+
+CREATE OR REPLACE PROCEDURE INSERT_PHANCONG_TP
+    (MANV_IN IN VARCHAR2,
+     MADA_IN IN VARCHAR2,
+     THOIGIAN_IN IN DATE)
+     
+AS
+BEGIN
+        INSERT INTO PHANCONG (MANV, MADA, THOIGIAN)
+        VALUES (MANV_IN, MADA_IN, THOIGIAN_IN);
+        COMMIT;
+END;
+/
+GRANT EXECUTE ON INSERT_PHANCONG_TP TO RL_TRUONGPHONG;
+-- PROC DELETE_PHANCONG_TP
+CONNECT AD_N5/123;
+
+CREATE OR REPLACE PROCEDURE DELETE_PHANCONG_TP
+    (MANV_IN IN VARCHAR2,
+     MADA_IN IN VARCHAR2,
+     THOIGIAN_IN IN DATE)
+AS
+BEGIN
+    DELETE FROM AD_N5.PHANCONG 
+    WHERE MANV = MANV_IN AND MADA = MADA_IN AND THOIGIAN = THOIGIAN_IN;
+END;
+/
+GRANT EXECUTE ON DELETE_PHANCONG_TP TO RL_TRUONGPHONG;
+/
+-- PROC UPDATE_PHANCONG_TP
+CONNECT AD_N5/123;
+
+CREATE OR REPLACE PROCEDURE UPDATE_PHANCONG_TP 
+    (MANV_IN IN VARCHAR2,
+     MADA_IN IN VARCHAR2,
+     THOIGIAN_IN IN DATE)
+AS
+BEGIN
+    UPDATE PHANCONG 
+    SET THOIGIAN = THOIGIAN_IN,
+        MADA = MADA_IN
+    WHERE MANV = MANV_IN;
+END;
+/
+GRANT EXECUTE ON UPDATE_PHANCONG_TP TO RL_TRUONGPHONG;
+
+
+--CS#4
+
+
+
+
+
+
+/
+connect AD_N5/123;
+ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
+/
+DROP ROLE RL_TAICHINH;
+CREATE ROLE RL_TAICHINH;
+/
+--drop user truoc khi tao
+/
+
+
+CREATE OR REPLACE PROCEDURE usp_DropUser_TAICHINH
+AS
+    CURSOR CUR IS ( SELECT USERNAME
+                 FROM DBA_USERS
+                 WHERE INSTR(USERNAME, 'TC_') != 0);
+    sql_str VARCHAR(2000);
+    Usr varchar2(30);
+    cnt number := 0;
+    
+BEGIN
+    OPEN CUR;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+    EXECUTE IMMEDIATE (sql_str);
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+        sql_str := 'DROP USER '||Usr||' CASCADE';
+        BEGIN
+            EXECUTE IMMEDIATE (sql_str);
+            cnt := cnt + 1;
+        EXCEPTION
+            WHEN OTHERS THEN NULL;
+        END;
+    END LOOP;
+END;
+/
+EXEC usp_DropUser_TAICHINH;
+
+--tao user TruongDeAn
+/
+
+CREATE OR REPLACE PROCEDURE usp_CreateUser_TAICHINH
+AS
+    CURSOR CUR IS ( SELECT MANV
+                 FROM NHANVIEN
+                 WHERE VAITRO='Tai Chinh');
+    sql_str VARCHAR(2000);
+    ck_User int;
+    Usr varchar2(30);
+    
+BEGIN
+    OPEN CUR;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+    EXECUTE IMMEDIATE (sql_str);
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+
+        sql_str := 'CREATE USER TC_'||Usr||' IDENTIFIED BY '|| '123';
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT CREATE SESSION TO TC_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT CONNECT TO TC_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT RL_TAICHINH TO TC_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT RL_NHANVIEN TO TC_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+    END LOOP;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=FALSE';
+    EXECUTE IMMEDIATE (sql_str);
+END;
+/
+
+EXEC usp_CreateUser_TAICHINH;
+
+/
+connect AD_N5/123;
+CREATE OR REPLACE VIEW view_decrypt_LUONGPHUCAP AS
+select  MANV,TENNV, PHAI,NGAYSINH,DIACHI, SODT,  AD_N5.FUNC_DECRYPT(LUONG) AS LUONG,AD_N5.FUNC_DECRYPT(PHUCAP) AS PHUCAP,VAITRO,MANQL,PHG
+    from NHANVIEN;
+
+grant select on AD_N5.view_decrypt_LUONGPHUCAP to RL_TAICHINH;
+
+grant select on NHANVIEN to RL_TAICHINH;
+grant select on PHANCONG to RL_TAICHINH;
+
+grant update (LUONG) on NHANVIEN to RL_TAICHINH;
+grant update (PHUCAP) on NHANVIEN to RL_TAICHINH;
+
+--CS#5
+--NHANSU
+/
+CONNECT AD_N5/123;
+/
+ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
+DROP ROLE RL_NHANSU;
+CREATE ROLE RL_NHANSU;
+--Tao NHANSU, cap role cho user
+/
+CREATE OR REPLACE PROCEDURE usp_DropUser_NHANSU
+AS
+    CURSOR CUR IS ( SELECT USERNAME
+                 FROM DBA_USERS
+                 WHERE INSTR(USERNAME, 'NS_') != 0);
+    sql_str VARCHAR(2000);
+    Usr varchar2(30);
+    cnt number := 0;
+    
+BEGIN
+    OPEN CUR;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+    EXECUTE IMMEDIATE (sql_str);
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+        sql_str := 'DROP USER '||Usr||' CASCADE';
+        BEGIN
+            EXECUTE IMMEDIATE (sql_str);
+            cnt := cnt + 1;
+        EXCEPTION
+            WHEN OTHERS THEN NULL;
+        END;
+    END LOOP;
+END;
+/
+EXEC usp_DropUser_NHANSU;
+/
+--tao user NHANSU
+CREATE OR REPLACE PROCEDURE usp_CreateUser_NHANSU
+AS
+    CURSOR CUR IS ( SELECT MANV
+                 FROM NHANVIEN
+                 WHERE VAITRO='Nhan Su');
+    sql_str VARCHAR(2000);
+    ck_User int;
+    Usr varchar2(30);
+    
+BEGIN
+    OPEN CUR;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+    EXECUTE IMMEDIATE (sql_str);
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+
+        sql_str := 'CREATE USER NS_'||Usr||' IDENTIFIED BY '|| '123';
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT CREATE SESSION TO NS_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT CONNECT TO NS_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT RL_NHANSU TO NS_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT RL_NHANVIEN TO NS_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+    END LOOP;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=FALSE';
+    EXECUTE IMMEDIATE (sql_str);
+END;
+/
+
+EXEC usp_CreateUser_NHANSU;
+/
+--THEM VA CAPNHAT TREN QUANHE PHONGBAN
+CONNECT AD_N5/123;
+GRANT SELECT,INSERT, UPDATE ON PHONGBAN TO RL_NHANSU;
+----proc insert
+/
+CONNECT AD_N5/123;
+
+CREATE OR REPLACE PROCEDURE INSERT_PHONGBAN
+    (MAPB_IN IN VARCHAR2,
+     TENPB_IN IN VARCHAR2,
+     TRPHG_IN IN VARCHAR2)
+     
+AS
+BEGIN
+        INSERT INTO PHONGBAN (MAPB, TENPB, TRPHG)
+        VALUES (MAPB_IN, TENPB_IN,TRPHG_IN);
+        COMMIT;
+END;
+/
+GRANT EXECUTE ON INSERT_PHONGBAN TO RL_NHANSU;
+--proc update phongban
+/
+CONNECT AD_N5/123;
+
+CREATE OR REPLACE PROCEDURE UPDATE_PHONGBAN
+    (MAPB_IN IN VARCHAR2,
+     TENPB_IN IN VARCHAR2,
+     TRPHG_IN IN VARCHAR2)
+AS
+BEGIN
+    UPDATE AD_N5.PHONGBAN
+    SET MAPB = MAPB_IN,
+        TENPB = TENPB_IN,
+        TRPHG = TRPHG_IN
+    WHERE MAPB = MAPB_IN;
+END;
+/
+GRANT EXECUTE ON UPDATE_PHONGBAN TO RL_NHANSU;
+----
+--y2: khong duoc xem truong LUONG va PHUCAP, khi cap nhat NHANVIEN thi 2 gtri do la null
+/
+CONNECT AD_N5/123
+CREATE OR REPLACE VIEW NHANVIEN_NHANSU AS
+SELECT MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, VAITRO, MANQL, PHG
+FROM NHANVIEN ;
+GRANT SELECT, INSERT,UPDATE ON NHANVIEN_NHANSU TO RL_NHANSU;
+
+/
+----proc insert
+CONNECT AD_N5/123;
+
+CREATE OR REPLACE PROCEDURE INSERT_NHANVIEN
+    (MANV_IN IN VARCHAR2,
+     TENNV_IN IN VARCHAR,
+     PHAI_IN IN VARCHAR2,
+     NGAYSINH_IN IN DATE,
+     DIACHI_IN IN VARCHAR2,
+     SODT_IN IN VARCHAR2,
+     VAITRO_IN IN VARCHAR2,
+     MANQL_IN IN VARCHAR2,
+     PHG_IN IN VARCHAR2)
+     
+AS
+BEGIN
+        INSERT INTO NHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP,VAITRO,MANQL, PHG)
+        VALUES (MANV_IN, TENNV_IN, PHAI_IN, NGAYSINH_IN, DIACHI_IN, SODT_IN, NULL, NULL, VAITRO_IN, MANQL_IN, PHG_IN);
+        COMMIT;
+END;
+/
+GRANT EXECUTE ON INSERT_NHANVIEN TO RL_NHANSU;
+/
+--proc update phongban
+CONNECT AD_N5/123;
+GRANT UPDATE(MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP,VAITRO,MANQL, PHG) ON NHANVIEN TO RL_NHANSU;
+
+CREATE OR REPLACE PROCEDURE UPDATE_NHANVIEN
+    (MANV_IN IN VARCHAR2,
+     TENNV_IN IN VARCHAR,
+     PHAI_IN IN VARCHAR2,
+     NGAYSINH_IN IN DATE,
+     DIACHI_IN IN VARCHAR2,
+     SODT_IN IN VARCHAR2,
+     VAITRO_IN IN VARCHAR2,
+     MANQL_IN IN VARCHAR2,
+     PHG_IN IN VARCHAR2)
+AS
+BEGIN
+    UPDATE AD_N5.NHANVIEN
+    SET TENNV = TENNV_IN,
+        PHAI = PHAI_IN,
+        NGAYSINH = NGAYSINH_IN,
+        DIACHI = DIACHI_IN,
+        SODT = SODT_IN,
+        VAITRO = VAITRO_IN,
+        MANQL = MANQL_IN,
+        PHG = PHG_IN
+    WHERE MANV = MANV_IN;
+END;
+/
+GRANT EXECUTE ON UPDATE_NHANVIEN TO RL_NHANSU;
+/
+--CS#6
+DROP ROLE RL_TRUONGDEAN;
+CREATE ROLE RL_TRUONGDEAN;
+/
+--drop user truoc khi tao
+/
+CREATE OR REPLACE PROCEDURE usp_DropUser_TRUONGDEAN
+AS
+    CURSOR CUR IS ( SELECT USERNAME
+                 FROM DBA_USERS
+                 WHERE INSTR(USERNAME, 'TDA_') != 0);
+    sql_str VARCHAR(2000);
+    Usr varchar2(30);
+    cnt number := 0;
+    
+BEGIN
+    OPEN CUR;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+    EXECUTE IMMEDIATE (sql_str);
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+        sql_str := 'DROP USER '||Usr||' CASCADE';
+        BEGIN
+            EXECUTE IMMEDIATE (sql_str);
+            cnt := cnt + 1;
+        EXCEPTION
+            WHEN OTHERS THEN NULL;
+        END;
+    END LOOP;
+END;
+/
+EXEC usp_DropUser_TRUONGDEAN;
+
+--tao user TruongDeAn
+/
+CREATE OR REPLACE PROCEDURE usp_CreateUser_TRUONGDEAN
+AS
+    CURSOR CUR IS ( SELECT MANV
+                 FROM NHANVIEN
+                 WHERE VAITRO='Truong De An');
+    sql_str VARCHAR(2000);
+    ck_User int;
+    Usr varchar2(30);
+    
+BEGIN
+    OPEN CUR;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+    EXECUTE IMMEDIATE (sql_str);
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+
+        sql_str := 'CREATE USER TDA_'||Usr||' IDENTIFIED BY '|| '123';
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT CREATE SESSION TO TDA_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT CONNECT TO TDA_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT RL_TRUONGDEAN TO TDA_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT RL_NHANVIEN TO TDA_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+    END LOOP;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=FALSE';
+    EXECUTE IMMEDIATE (sql_str);
+END;
+/
+
+EXEC usp_CreateUser_TRUONGDEAN;
+/
+--Y2
+/
+GRANT SELECT, INSERT, UPDATE, DELETE ON DEAN TO RL_TRUONGDEAN;
+
+
+/
+
+--
+--CS2
+--
+-- TAO ROLE QUAN LY TRUC TIEP
+DROP ROLE RL_QLTRUCTIEP;
+CREATE ROLE RL_QLTRUCTIEP;
+
+--
+-- XOA PROC TAO VA XOA USER QL TRUC TIEP
+--proc tao user QL Truc Tiep
+/
+CREATE OR REPLACE PROCEDURE usp_DropUser_QLTRUCTIEP
+AS
+    CURSOR CUR IS ( SELECT USERNAME
+                 FROM DBA_USERS
+                 WHERE INSTR(USERNAME, 'QLTT_') != 0);
+    sql_str VARCHAR(2000);
+    Usr varchar2(30);
+    cnt number := 0;
+    
+BEGIN
+    OPEN CUR;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+    EXECUTE IMMEDIATE (sql_str);
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+        sql_str := 'DROP USER '||Usr||' CASCADE';
+        BEGIN
+            EXECUTE IMMEDIATE (sql_str);
+            cnt := cnt + 1;
+        EXCEPTION
+            WHEN OTHERS THEN NULL;
+        END;
+    END LOOP;
+END;
+/
+EXEC usp_DropUser_QLTRUCTIEP;
+/
+
+--
+-- TAO USER QUAN LY TRUC TIEP
+CREATE OR REPLACE PROCEDURE usp_CreateUser_QLTRUCTIEP
+AS
+    CURSOR CUR IS ( SELECT MANV
+                 FROM NHANVIEN
+                 WHERE VAITRO='QL Truc Tiep');
+    sql_str VARCHAR(2000);
+    ck_User int;
+    Usr varchar2(30);
+    
+BEGIN
+    OPEN CUR;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+    EXECUTE IMMEDIATE (sql_str);
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+
+        sql_str := 'CREATE USER QLTT_'||Usr||' IDENTIFIED BY '|| '123';
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT CREATE SESSION TO QLTT_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT CONNECT TO QLTT_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT RL_NHANVIEN TO QLTT_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+        sql_str := 'GRANT RL_QLTRUCTIEP TO QLTT_'||Usr;
+        EXECUTE IMMEDIATE (sql_str);
+    END LOOP;
+    sql_str := 'ALTER SESSION SET "_ORACLE_SCRIPT"=FALSE';
+    EXECUTE IMMEDIATE (sql_str);
+END;
+/
+EXEC usp_CreateUser_QLTRUCTIEP;
+
+
+
+--
+-- Phan 1 CS2
+--DROP VIEW QLTT_CS2_PHAN1;
+
+CREATE OR REPLACE VIEW QLTT_CS2_PHAN1
+AS
+SELECT MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, VAITRO, MANQL, PHG
+FROM AD_N5.NHANVIEN
+WHERE MANQL = SUBSTR(SYS_CONTEXT('USERENV', 'SESSION_USER'), -5);
+
+GRANT SELECT ON QLTT_CS2_PHAN1 TO RL_QLTRUCTIEP;
+
+
+-- Phan 2 CS2
+CONNECT AD_N5/123;
+/
+CREATE OR REPLACE VIEW QLTT_CS2_PHAN2
+AS 
+    SELECT *
+    FROM PHANCONG
+    WHERE PHANCONG.MANV = SUBSTR(SYS_CONTEXT('USERENV', 'SESSION_USER'), -5) OR MANV IN (SELECT MANV
+                                                                                            FROM NHANVIEN
+                                                                                            WHERE MANQL = SUBSTR(SYS_CONTEXT('USERENV', 'SESSION_USER'), -5));
+GRANT SELECT ON QLTT_CS2_PHAN2 TO RL_QLTRUCTIEP;
